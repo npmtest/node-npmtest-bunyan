@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-bunyan/bunyan/lib/bunyan.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-bunyan/node_modules/bunyan/lib/bunyan.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,9 +190,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-bunyan">npmtest-bunyan (v0.0.2)</a>
+        <a href="https://github.com/npmtest/node-npmtest-bunyan">npmtest-bunyan (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-bunyan/bunyan/lib/bunyan.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-bunyan/node_modules/bunyan/lib/bunyan.js</span></h1>
     <h2>
         
         Statements: <span class="metric">17.47% <small>(120 / 687)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-bunyan/bunyan/lib/</a> &#187; bunyan.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-bunyan/node_modules/bunyan/lib/</a> » bunyan.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -3490,12 +3488,12 @@ var VERSION = '1.8.10';
 var LOG_VERSION = 0;
 &nbsp;
 &nbsp;
-var xxx = <span class="fstat-no" title="function not covered" >function xxx(s) {</span>     // internal dev/debug logging
-<span class="cstat-no" title="statement not covered" >    var args = ['XX' + 'X: '+s].concat(</span>
+var xxx = <span class="fstat-no" title="function not covered">function xxx(s) {</span>     // internal dev/debug logging
+<span class="cstat-no" title="statement not covered">    var args = ['XX' + 'X: '+s].concat(</span>
         Array.prototype.slice.call(arguments, 1));
-<span class="cstat-no" title="statement not covered" >    console.error.apply(this, args);</span>
+<span class="cstat-no" title="statement not covered">    console.error.apply(this, args);</span>
 };
-var xxx = <span class="fstat-no" title="function not covered" >function xxx() {</span>};  // comment out to turn on debug logging
+var xxx = <span class="fstat-no" title="function not covered">function xxx() {</span>};  // comment out to turn on debug logging
 &nbsp;
 &nbsp;
 /*
@@ -3519,38 +3517,38 @@ var xxx = <span class="fstat-no" title="function not covered" >function xxx() {<
  * - Other? Please open issues if things are broken.
  */
 var runtimeEnv;
-<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof (process) !== 'undefined' &amp;&amp; process.versions) {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (process.versions.nw) {
-<span class="cstat-no" title="statement not covered" >        runtimeEnv = 'nw';</span>
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (process.versions.node) {
+<span class="missing-if-branch" title="else path not taken">E</span>if (typeof (process) !== 'undefined' &amp;&amp; process.versions) {
+    <span class="missing-if-branch" title="if path not taken">I</span>if (process.versions.nw) {
+<span class="cstat-no" title="statement not covered">        runtimeEnv = 'nw';</span>
+    } else <span class="missing-if-branch" title="else path not taken">E</span>if (process.versions.node) {
         runtimeEnv = 'node';
     }
 }
-<span class="missing-if-branch" title="if path not taken" >I</span>if (!runtimeEnv &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >typeof (window) !== 'undefined' </span>&amp;&amp;
-<span class="branch-2 cbranch-no" title="branch not covered" >    window.window === window)</span> {
-<span class="cstat-no" title="statement not covered" >    runtimeEnv = 'browser';</span>
+<span class="missing-if-branch" title="if path not taken">I</span>if (!runtimeEnv &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">typeof (window) !== 'undefined' </span>&amp;&amp;
+<span class="branch-2 cbranch-no" title="branch not covered">    window.window === window)</span> {
+<span class="cstat-no" title="statement not covered">    runtimeEnv = 'browser';</span>
 }
-<span class="missing-if-branch" title="if path not taken" >I</span>if (!runtimeEnv) {
-<span class="cstat-no" title="statement not covered" >    throw new Error('unknown runtime environment');</span>
+<span class="missing-if-branch" title="if path not taken">I</span>if (!runtimeEnv) {
+<span class="cstat-no" title="statement not covered">    throw new Error('unknown runtime environment');</span>
 }
 &nbsp;
 &nbsp;
 var os, fs, dtrace;
-<span class="missing-if-branch" title="if path not taken" >I</span>if (runtimeEnv === 'browser') {
-<span class="cstat-no" title="statement not covered" >    os = {</span>
-        hostname: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            return window.location.host;</span>
+<span class="missing-if-branch" title="if path not taken">I</span>if (runtimeEnv === 'browser') {
+<span class="cstat-no" title="statement not covered">    os = {</span>
+        hostname: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            return window.location.host;</span>
         }
     };
-<span class="cstat-no" title="statement not covered" >    fs = {};</span>
-<span class="cstat-no" title="statement not covered" >    dtrace = null;</span>
+<span class="cstat-no" title="statement not covered">    fs = {};</span>
+<span class="cstat-no" title="statement not covered">    dtrace = null;</span>
 } else {
     os = require('os');
     fs = require('fs');
     try {
         dtrace = require('dtrace-provider' + '');
     } catch (e) {
-<span class="cstat-no" title="statement not covered" >        dtrace = null;</span>
+<span class="cstat-no" title="statement not covered">        dtrace = null;</span>
     }
 }
 var util = require('util');
@@ -3561,17 +3559,17 @@ var stream = require('stream');
 try {
     var safeJsonStringify = require('safe-json-stringify');
 } catch (e) {
-<span class="cstat-no" title="statement not covered" >    safeJsonStringify = null;</span>
+<span class="cstat-no" title="statement not covered">    safeJsonStringify = null;</span>
 }
-<span class="missing-if-branch" title="if path not taken" >I</span>if (process.env.BUNYAN_TEST_NO_SAFE_JSON_STRINGIFY) {
-<span class="cstat-no" title="statement not covered" >    safeJsonStringify = null;</span>
+<span class="missing-if-branch" title="if path not taken">I</span>if (process.env.BUNYAN_TEST_NO_SAFE_JSON_STRINGIFY) {
+<span class="cstat-no" title="statement not covered">    safeJsonStringify = null;</span>
 }
 &nbsp;
 // The 'mv' module is required for rotating-file stream support.
 try {
     var mv = require('mv' + '');
 } catch (e) {
-<span class="cstat-no" title="statement not covered" >    mv = null;</span>
+<span class="cstat-no" title="statement not covered">    mv = null;</span>
 }
 &nbsp;
 try {
@@ -3587,60 +3585,60 @@ try {
  * A shallow copy of an object. Bunyan logging attempts to never cause
  * exceptions, so this function attempts to handle non-objects gracefully.
  */
-<span class="fstat-no" title="function not covered" >function objCopy(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (obj == null) {  // null or undefined</span>
-<span class="cstat-no" title="statement not covered" >        return obj;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (Array.isArray(obj)) {</span>
-<span class="cstat-no" title="statement not covered" >        return obj.slice();</span>
-    } else <span class="cstat-no" title="statement not covered" >if (typeof (obj) === 'object') {</span>
-<span class="cstat-no" title="statement not covered" >        var copy = {};</span>
-<span class="cstat-no" title="statement not covered" >        Object.keys(obj).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
-<span class="cstat-no" title="statement not covered" >            copy[k] = obj[k];</span>
+<span class="fstat-no" title="function not covered">function objCopy(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (obj == null) {  // null or undefined</span>
+<span class="cstat-no" title="statement not covered">        return obj;</span>
+    } else <span class="cstat-no" title="statement not covered">if (Array.isArray(obj)) {</span>
+<span class="cstat-no" title="statement not covered">        return obj.slice();</span>
+    } else <span class="cstat-no" title="statement not covered">if (typeof (obj) === 'object') {</span>
+<span class="cstat-no" title="statement not covered">        var copy = {};</span>
+<span class="cstat-no" title="statement not covered">        Object.keys(obj).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
+<span class="cstat-no" title="statement not covered">            copy[k] = obj[k];</span>
         });
-<span class="cstat-no" title="statement not covered" >        return copy;</span>
+<span class="cstat-no" title="statement not covered">        return copy;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        return obj;</span>
+<span class="cstat-no" title="statement not covered">        return obj;</span>
     }
 }
 &nbsp;
 var format = util.format;
-<span class="missing-if-branch" title="if path not taken" >I</span>if (!format) {
+<span class="missing-if-branch" title="if path not taken">I</span>if (!format) {
     // If node &lt; 0.6, then use its `util.format`:
     // &lt;https://github.com/joyent/node/blob/master/lib/util.js#L22&gt;:
-<span class="cstat-no" title="statement not covered" >    var inspect = util.inspect;</span>
-<span class="cstat-no" title="statement not covered" >    var formatRegExp = /%[sdj%]/g;</span>
-<span class="cstat-no" title="statement not covered" >    format = <span class="fstat-no" title="function not covered" >function format(f) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (typeof (f) !== 'string') {</span>
-<span class="cstat-no" title="statement not covered" >            var objects = [];</span>
-<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; arguments.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >                objects.push(inspect(arguments[i]));</span>
+<span class="cstat-no" title="statement not covered">    var inspect = util.inspect;</span>
+<span class="cstat-no" title="statement not covered">    var formatRegExp = /%[sdj%]/g;</span>
+<span class="cstat-no" title="statement not covered">    format = <span class="fstat-no" title="function not covered">function format(f) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (typeof (f) !== 'string') {</span>
+<span class="cstat-no" title="statement not covered">            var objects = [];</span>
+<span class="cstat-no" title="statement not covered">            for (var i = 0; i &lt; arguments.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">                objects.push(inspect(arguments[i]));</span>
             }
-<span class="cstat-no" title="statement not covered" >            return objects.join(' ');</span>
+<span class="cstat-no" title="statement not covered">            return objects.join(' ');</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var i = 1;</span>
-<span class="cstat-no" title="statement not covered" >        var args = arguments;</span>
-<span class="cstat-no" title="statement not covered" >        var len = args.length;</span>
-<span class="cstat-no" title="statement not covered" >        var str = String(f).replace(formatRegExp, <span class="fstat-no" title="function not covered" >function (x) {</span></span>
-<span class="cstat-no" title="statement not covered" >            if (i &gt;= len)</span>
-<span class="cstat-no" title="statement not covered" >                return x;</span>
-<span class="cstat-no" title="statement not covered" >            switch (x) {</span>
-                case '%s': <span class="cstat-no" title="statement not covered" >return String(args[i++]);</span>
-                case '%d': <span class="cstat-no" title="statement not covered" >return Number(args[i++]);</span>
-                case '%j': <span class="cstat-no" title="statement not covered" >return fastAndSafeJsonStringify(args[i++]);</span>
-                case '%%': <span class="cstat-no" title="statement not covered" >return '%';</span>
+<span class="cstat-no" title="statement not covered">        var i = 1;</span>
+<span class="cstat-no" title="statement not covered">        var args = arguments;</span>
+<span class="cstat-no" title="statement not covered">        var len = args.length;</span>
+<span class="cstat-no" title="statement not covered">        var str = String(f).replace(formatRegExp, <span class="fstat-no" title="function not covered">function (x) {</span></span>
+<span class="cstat-no" title="statement not covered">            if (i &gt;= len)</span>
+<span class="cstat-no" title="statement not covered">                return x;</span>
+<span class="cstat-no" title="statement not covered">            switch (x) {</span>
+                case '%s': <span class="cstat-no" title="statement not covered">return String(args[i++]);</span>
+                case '%d': <span class="cstat-no" title="statement not covered">return Number(args[i++]);</span>
+                case '%j': <span class="cstat-no" title="statement not covered">return fastAndSafeJsonStringify(args[i++]);</span>
+                case '%%': <span class="cstat-no" title="statement not covered">return '%';</span>
                 default:
-<span class="cstat-no" title="statement not covered" >                    return x;</span>
+<span class="cstat-no" title="statement not covered">                    return x;</span>
             }
         });
-<span class="cstat-no" title="statement not covered" >        for (var x = args[i]; i &lt; len; x = args[++i]) {</span>
-<span class="cstat-no" title="statement not covered" >            if (x === null || typeof (x) !== 'object') {</span>
-<span class="cstat-no" title="statement not covered" >                str += ' ' + x;</span>
+<span class="cstat-no" title="statement not covered">        for (var x = args[i]; i &lt; len; x = args[++i]) {</span>
+<span class="cstat-no" title="statement not covered">            if (x === null || typeof (x) !== 'object') {</span>
+<span class="cstat-no" title="statement not covered">                str += ' ' + x;</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                str += ' ' + inspect(x);</span>
+<span class="cstat-no" title="statement not covered">                str += ' ' + inspect(x);</span>
             }
         }
-<span class="cstat-no" title="statement not covered" >        return str;</span>
+<span class="cstat-no" title="statement not covered">        return str;</span>
     };
 }
 &nbsp;
@@ -3649,40 +3647,40 @@ var format = util.format;
  * Gather some caller info 3 stack levels up.
  * See &lt;http://code.google.com/p/v8/wiki/JavaScriptStackTraceApi&gt;.
  */
-<span class="fstat-no" title="function not covered" >function getCaller3Info() {</span>
-<span class="cstat-no" title="statement not covered" >    if (this === undefined) {</span>
+<span class="fstat-no" title="function not covered">function getCaller3Info() {</span>
+<span class="cstat-no" title="statement not covered">    if (this === undefined) {</span>
         // Cannot access caller info in 'strict' mode.
-<span class="cstat-no" title="statement not covered" >        return;</span>
+<span class="cstat-no" title="statement not covered">        return;</span>
     }
-<span class="cstat-no" title="statement not covered" >    var obj = {};</span>
-<span class="cstat-no" title="statement not covered" >    var saveLimit = Error.stackTraceLimit;</span>
-<span class="cstat-no" title="statement not covered" >    var savePrepare = Error.prepareStackTrace;</span>
-<span class="cstat-no" title="statement not covered" >    Error.stackTraceLimit = 3;</span>
+<span class="cstat-no" title="statement not covered">    var obj = {};</span>
+<span class="cstat-no" title="statement not covered">    var saveLimit = Error.stackTraceLimit;</span>
+<span class="cstat-no" title="statement not covered">    var savePrepare = Error.prepareStackTrace;</span>
+<span class="cstat-no" title="statement not covered">    Error.stackTraceLimit = 3;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    Error.prepareStackTrace = <span class="fstat-no" title="function not covered" >function (_, stack) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var caller = stack[2];</span>
-<span class="cstat-no" title="statement not covered" >        if (sourceMapSupport) {</span>
-<span class="cstat-no" title="statement not covered" >            caller = sourceMapSupport.wrapCallSite(caller);</span>
+<span class="cstat-no" title="statement not covered">    Error.prepareStackTrace = <span class="fstat-no" title="function not covered">function (_, stack) {</span></span>
+<span class="cstat-no" title="statement not covered">        var caller = stack[2];</span>
+<span class="cstat-no" title="statement not covered">        if (sourceMapSupport) {</span>
+<span class="cstat-no" title="statement not covered">            caller = sourceMapSupport.wrapCallSite(caller);</span>
         }
-<span class="cstat-no" title="statement not covered" >        obj.file = caller.getFileName();</span>
-<span class="cstat-no" title="statement not covered" >        obj.line = caller.getLineNumber();</span>
-<span class="cstat-no" title="statement not covered" >        var func = caller.getFunctionName();</span>
-<span class="cstat-no" title="statement not covered" >        if (func)</span>
-<span class="cstat-no" title="statement not covered" >            obj.func = func;</span>
+<span class="cstat-no" title="statement not covered">        obj.file = caller.getFileName();</span>
+<span class="cstat-no" title="statement not covered">        obj.line = caller.getLineNumber();</span>
+<span class="cstat-no" title="statement not covered">        var func = caller.getFunctionName();</span>
+<span class="cstat-no" title="statement not covered">        if (func)</span>
+<span class="cstat-no" title="statement not covered">            obj.func = func;</span>
     };
-<span class="cstat-no" title="statement not covered" >    Error.captureStackTrace(this, getCaller3Info);</span>
-<span class="cstat-no" title="statement not covered" >    this.stack;</span>
+<span class="cstat-no" title="statement not covered">    Error.captureStackTrace(this, getCaller3Info);</span>
+<span class="cstat-no" title="statement not covered">    this.stack;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    Error.stackTraceLimit = saveLimit;</span>
-<span class="cstat-no" title="statement not covered" >    Error.prepareStackTrace = savePrepare;</span>
-<span class="cstat-no" title="statement not covered" >    return obj;</span>
+<span class="cstat-no" title="statement not covered">    Error.stackTraceLimit = saveLimit;</span>
+<span class="cstat-no" title="statement not covered">    Error.prepareStackTrace = savePrepare;</span>
+<span class="cstat-no" title="statement not covered">    return obj;</span>
 }
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function _indent(s, indent) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!indent) <span class="cstat-no" title="statement not covered" >indent = '    ';</span></span>
-<span class="cstat-no" title="statement not covered" >    var lines = s.split(/\r?\n/g);</span>
-<span class="cstat-no" title="statement not covered" >    return indent + lines.join('\n' + indent);</span>
+<span class="fstat-no" title="function not covered">function _indent(s, indent) {</span>
+<span class="cstat-no" title="statement not covered">    if (!indent) <span class="cstat-no" title="statement not covered">indent = '    ';</span></span>
+<span class="cstat-no" title="statement not covered">    var lines = s.split(/\r?\n/g);</span>
+<span class="cstat-no" title="statement not covered">    return indent + lines.join('\n' + indent);</span>
 }
 &nbsp;
 &nbsp;
@@ -3693,32 +3691,32 @@ var format = util.format;
  * @param dedupKey {String} Optional. A short string key for this warning to
  *      have its warning only printed once.
  */
-<span class="fstat-no" title="function not covered" >function _warn(msg, dedupKey) {</span>
-<span class="cstat-no" title="statement not covered" >    assert.ok(msg);</span>
-<span class="cstat-no" title="statement not covered" >    if (dedupKey) {</span>
-<span class="cstat-no" title="statement not covered" >        if (_warned[dedupKey]) {</span>
-<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="fstat-no" title="function not covered">function _warn(msg, dedupKey) {</span>
+<span class="cstat-no" title="statement not covered">    assert.ok(msg);</span>
+<span class="cstat-no" title="statement not covered">    if (dedupKey) {</span>
+<span class="cstat-no" title="statement not covered">        if (_warned[dedupKey]) {</span>
+<span class="cstat-no" title="statement not covered">            return;</span>
         }
-<span class="cstat-no" title="statement not covered" >        _warned[dedupKey] = true;</span>
+<span class="cstat-no" title="statement not covered">        _warned[dedupKey] = true;</span>
     }
-<span class="cstat-no" title="statement not covered" >    process.stderr.write(msg + '\n');</span>
+<span class="cstat-no" title="statement not covered">    process.stderr.write(msg + '\n');</span>
 }
-<span class="fstat-no" title="function not covered" >function _haveWarned(dedupKey) {</span>
-<span class="cstat-no" title="statement not covered" >    return _warned[dedupKey];</span>
+<span class="fstat-no" title="function not covered">function _haveWarned(dedupKey) {</span>
+<span class="cstat-no" title="statement not covered">    return _warned[dedupKey];</span>
 }
 var _warned = {};
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function ConsoleRawStream() {</span>}
-ConsoleRawStream.prototype.write = <span class="fstat-no" title="function not covered" >function (rec) {</span>
-<span class="cstat-no" title="statement not covered" >    if (rec.level &lt; INFO) {</span>
-<span class="cstat-no" title="statement not covered" >        console.log(rec);</span>
-    } else <span class="cstat-no" title="statement not covered" >if (rec.level &lt; WARN) {</span>
-<span class="cstat-no" title="statement not covered" >        console.info(rec);</span>
-    } else <span class="cstat-no" title="statement not covered" >if (rec.level &lt; ERROR) {</span>
-<span class="cstat-no" title="statement not covered" >        console.warn(rec);</span>
+<span class="fstat-no" title="function not covered">function ConsoleRawStream() {</span>}
+ConsoleRawStream.prototype.write = <span class="fstat-no" title="function not covered">function (rec) {</span>
+<span class="cstat-no" title="statement not covered">    if (rec.level &lt; INFO) {</span>
+<span class="cstat-no" title="statement not covered">        console.log(rec);</span>
+    } else <span class="cstat-no" title="statement not covered">if (rec.level &lt; WARN) {</span>
+<span class="cstat-no" title="statement not covered">        console.info(rec);</span>
+    } else <span class="cstat-no" title="statement not covered">if (rec.level &lt; ERROR) {</span>
+<span class="cstat-no" title="statement not covered">        console.warn(rec);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        console.error(rec);</span>
+<span class="cstat-no" title="statement not covered">        console.error(rec);</span>
     }
 };
 &nbsp;
@@ -3756,32 +3754,32 @@ var probes = dtrace &amp;&amp; {};
  *      integer level.
  * @api public
  */
-<span class="fstat-no" title="function not covered" >function resolveLevel(nameOrNum) {</span>
-<span class="cstat-no" title="statement not covered" >    var level;</span>
-<span class="cstat-no" title="statement not covered" >    var type = typeof (nameOrNum);</span>
-<span class="cstat-no" title="statement not covered" >    if (type === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >        level = levelFromName[nameOrNum.toLowerCase()];</span>
-<span class="cstat-no" title="statement not covered" >        if (!level) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error(format('unknown level name: "%s"', nameOrNum));</span>
+<span class="fstat-no" title="function not covered">function resolveLevel(nameOrNum) {</span>
+<span class="cstat-no" title="statement not covered">    var level;</span>
+<span class="cstat-no" title="statement not covered">    var type = typeof (nameOrNum);</span>
+<span class="cstat-no" title="statement not covered">    if (type === 'string') {</span>
+<span class="cstat-no" title="statement not covered">        level = levelFromName[nameOrNum.toLowerCase()];</span>
+<span class="cstat-no" title="statement not covered">        if (!level) {</span>
+<span class="cstat-no" title="statement not covered">            throw new Error(format('unknown level name: "%s"', nameOrNum));</span>
         }
-    } else <span class="cstat-no" title="statement not covered" >if (type !== 'number') {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError(format('cannot resolve level: invalid arg (%s):',</span>
+    } else <span class="cstat-no" title="statement not covered">if (type !== 'number') {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError(format('cannot resolve level: invalid arg (%s):',</span>
             type, nameOrNum));
-    } else <span class="cstat-no" title="statement not covered" >if (nameOrNum &lt; 0 || Math.floor(nameOrNum) !== nameOrNum) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError(format('level is not a positive integer: %s',</span>
+    } else <span class="cstat-no" title="statement not covered">if (nameOrNum &lt; 0 || Math.floor(nameOrNum) !== nameOrNum) {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError(format('level is not a positive integer: %s',</span>
             nameOrNum));
     } else {
-<span class="cstat-no" title="statement not covered" >        level = nameOrNum;</span>
+<span class="cstat-no" title="statement not covered">        level = nameOrNum;</span>
     }
-<span class="cstat-no" title="statement not covered" >    return level;</span>
+<span class="cstat-no" title="statement not covered">    return level;</span>
 }
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isWritable(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (obj instanceof stream.Writable) {</span>
-<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="fstat-no" title="function not covered">function isWritable(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (obj instanceof stream.Writable) {</span>
+<span class="cstat-no" title="statement not covered">        return true;</span>
     }
-<span class="cstat-no" title="statement not covered" >    return typeof (obj.write) === 'function';</span>
+<span class="cstat-no" title="statement not covered">    return typeof (obj.write) === 'function';</span>
 }
 &nbsp;
 &nbsp;
@@ -3822,129 +3820,129 @@ var probes = dtrace &amp;&amp; {};
  *    required for them. IOW, this is a fast path for frequent child
  *    creation.
  */
-<span class="fstat-no" title="function not covered" >function Logger(options, _childOptions, _childSimple) {</span>
-<span class="cstat-no" title="statement not covered" >    xxx('Logger start:', options)</span>
-<span class="cstat-no" title="statement not covered" >    if (!(this instanceof Logger)) {</span>
-<span class="cstat-no" title="statement not covered" >        return new Logger(options, _childOptions);</span>
+<span class="fstat-no" title="function not covered">function Logger(options, _childOptions, _childSimple) {</span>
+<span class="cstat-no" title="statement not covered">    xxx('Logger start:', options)</span>
+<span class="cstat-no" title="statement not covered">    if (!(this instanceof Logger)) {</span>
+<span class="cstat-no" title="statement not covered">        return new Logger(options, _childOptions);</span>
     }
 &nbsp;
     // Input arg validation.
-<span class="cstat-no" title="statement not covered" >    var parent;</span>
-<span class="cstat-no" title="statement not covered" >    if (_childOptions !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        parent = options;</span>
-<span class="cstat-no" title="statement not covered" >        options = _childOptions;</span>
-<span class="cstat-no" title="statement not covered" >        if (!(parent instanceof Logger)) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new TypeError(</span>
+<span class="cstat-no" title="statement not covered">    var parent;</span>
+<span class="cstat-no" title="statement not covered">    if (_childOptions !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">        parent = options;</span>
+<span class="cstat-no" title="statement not covered">        options = _childOptions;</span>
+<span class="cstat-no" title="statement not covered">        if (!(parent instanceof Logger)) {</span>
+<span class="cstat-no" title="statement not covered">            throw new TypeError(</span>
                 'invalid Logger creation: do not pass a second arg');
         }
     }
-<span class="cstat-no" title="statement not covered" >    if (!options) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('options (object) is required');</span>
+<span class="cstat-no" title="statement not covered">    if (!options) {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('options (object) is required');</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (!parent) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!options.name) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new TypeError('options.name (string) is required');</span>
+<span class="cstat-no" title="statement not covered">    if (!parent) {</span>
+<span class="cstat-no" title="statement not covered">        if (!options.name) {</span>
+<span class="cstat-no" title="statement not covered">            throw new TypeError('options.name (string) is required');</span>
         }
     } else {
-<span class="cstat-no" title="statement not covered" >        if (options.name) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new TypeError(</span>
+<span class="cstat-no" title="statement not covered">        if (options.name) {</span>
+<span class="cstat-no" title="statement not covered">            throw new TypeError(</span>
                 'invalid options.name: child cannot set logger name');
         }
     }
-<span class="cstat-no" title="statement not covered" >    if (options.stream &amp;&amp; options.streams) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('cannot mix "streams" and "stream" options');</span>
+<span class="cstat-no" title="statement not covered">    if (options.stream &amp;&amp; options.streams) {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('cannot mix "streams" and "stream" options');</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (options.streams &amp;&amp; !Array.isArray(options.streams)) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('invalid options.streams: must be an array')</span>
+<span class="cstat-no" title="statement not covered">    if (options.streams &amp;&amp; !Array.isArray(options.streams)) {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('invalid options.streams: must be an array')</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (options.serializers &amp;&amp; (typeof (options.serializers) !== 'object' ||</span>
+<span class="cstat-no" title="statement not covered">    if (options.serializers &amp;&amp; (typeof (options.serializers) !== 'object' ||</span>
             Array.isArray(options.serializers))) {
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('invalid options.serializers: must be an object')</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('invalid options.serializers: must be an object')</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    EventEmitter.call(this);</span>
+<span class="cstat-no" title="statement not covered">    EventEmitter.call(this);</span>
 &nbsp;
     // Fast path for simple child creation.
-<span class="cstat-no" title="statement not covered" >    if (parent &amp;&amp; _childSimple) {</span>
+<span class="cstat-no" title="statement not covered">    if (parent &amp;&amp; _childSimple) {</span>
         // `_isSimpleChild` is a signal to stream close handling that this child
         // owns none of its streams.
-<span class="cstat-no" title="statement not covered" >        this._isSimpleChild = true;</span>
+<span class="cstat-no" title="statement not covered">        this._isSimpleChild = true;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this._level = parent._level;</span>
-<span class="cstat-no" title="statement not covered" >        this.streams = parent.streams;</span>
-<span class="cstat-no" title="statement not covered" >        this.serializers = parent.serializers;</span>
-<span class="cstat-no" title="statement not covered" >        this.src = parent.src;</span>
-<span class="cstat-no" title="statement not covered" >        var fields = this.fields = {};</span>
-<span class="cstat-no" title="statement not covered" >        var parentFieldNames = Object.keys(parent.fields);</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; parentFieldNames.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            var name = parentFieldNames[i];</span>
-<span class="cstat-no" title="statement not covered" >            fields[name] = parent.fields[name];</span>
+<span class="cstat-no" title="statement not covered">        this._level = parent._level;</span>
+<span class="cstat-no" title="statement not covered">        this.streams = parent.streams;</span>
+<span class="cstat-no" title="statement not covered">        this.serializers = parent.serializers;</span>
+<span class="cstat-no" title="statement not covered">        this.src = parent.src;</span>
+<span class="cstat-no" title="statement not covered">        var fields = this.fields = {};</span>
+<span class="cstat-no" title="statement not covered">        var parentFieldNames = Object.keys(parent.fields);</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; parentFieldNames.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            var name = parentFieldNames[i];</span>
+<span class="cstat-no" title="statement not covered">            fields[name] = parent.fields[name];</span>
         }
-<span class="cstat-no" title="statement not covered" >        var names = Object.keys(options);</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; names.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            var name = names[i];</span>
-<span class="cstat-no" title="statement not covered" >            fields[name] = options[name];</span>
+<span class="cstat-no" title="statement not covered">        var names = Object.keys(options);</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; names.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            var name = names[i];</span>
+<span class="cstat-no" title="statement not covered">            fields[name] = options[name];</span>
         }
-<span class="cstat-no" title="statement not covered" >        return;</span>
+<span class="cstat-no" title="statement not covered">        return;</span>
     }
 &nbsp;
     // Start values.
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    if (parent) {</span>
-<span class="cstat-no" title="statement not covered" >        this._level = parent._level;</span>
-<span class="cstat-no" title="statement not covered" >        this.streams = [];</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; parent.streams.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            var s = objCopy(parent.streams[i]);</span>
-<span class="cstat-no" title="statement not covered" >            s.closeOnExit = false; </span>// Don't own parent stream.
-<span class="cstat-no" title="statement not covered" >            this.streams.push(s);</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    if (parent) {</span>
+<span class="cstat-no" title="statement not covered">        this._level = parent._level;</span>
+<span class="cstat-no" title="statement not covered">        this.streams = [];</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; parent.streams.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            var s = objCopy(parent.streams[i]);</span>
+<span class="cstat-no" title="statement not covered">            s.closeOnExit = false; </span>// Don't own parent stream.
+<span class="cstat-no" title="statement not covered">            this.streams.push(s);</span>
         }
-<span class="cstat-no" title="statement not covered" >        this.serializers = objCopy(parent.serializers);</span>
-<span class="cstat-no" title="statement not covered" >        this.src = parent.src;</span>
-<span class="cstat-no" title="statement not covered" >        this.fields = objCopy(parent.fields);</span>
-<span class="cstat-no" title="statement not covered" >        if (options.level) {</span>
-<span class="cstat-no" title="statement not covered" >            this.level(options.level);</span>
+<span class="cstat-no" title="statement not covered">        this.serializers = objCopy(parent.serializers);</span>
+<span class="cstat-no" title="statement not covered">        this.src = parent.src;</span>
+<span class="cstat-no" title="statement not covered">        this.fields = objCopy(parent.fields);</span>
+<span class="cstat-no" title="statement not covered">        if (options.level) {</span>
+<span class="cstat-no" title="statement not covered">            this.level(options.level);</span>
         }
     } else {
-<span class="cstat-no" title="statement not covered" >        this._level = Number.POSITIVE_INFINITY;</span>
-<span class="cstat-no" title="statement not covered" >        this.streams = [];</span>
-<span class="cstat-no" title="statement not covered" >        this.serializers = null;</span>
-<span class="cstat-no" title="statement not covered" >        this.src = false;</span>
-<span class="cstat-no" title="statement not covered" >        this.fields = {};</span>
+<span class="cstat-no" title="statement not covered">        this._level = Number.POSITIVE_INFINITY;</span>
+<span class="cstat-no" title="statement not covered">        this.streams = [];</span>
+<span class="cstat-no" title="statement not covered">        this.serializers = null;</span>
+<span class="cstat-no" title="statement not covered">        this.src = false;</span>
+<span class="cstat-no" title="statement not covered">        this.fields = {};</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!dtp &amp;&amp; dtrace) {</span>
-<span class="cstat-no" title="statement not covered" >        dtp = dtrace.createDTraceProvider('bunyan');</span>
+<span class="cstat-no" title="statement not covered">    if (!dtp &amp;&amp; dtrace) {</span>
+<span class="cstat-no" title="statement not covered">        dtp = dtrace.createDTraceProvider('bunyan');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        for (var level in levelFromName) {</span>
-<span class="cstat-no" title="statement not covered" >            var probe;</span>
+<span class="cstat-no" title="statement not covered">        for (var level in levelFromName) {</span>
+<span class="cstat-no" title="statement not covered">            var probe;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            probes[levelFromName[level]] = probe =</span>
+<span class="cstat-no" title="statement not covered">            probes[levelFromName[level]] = probe =</span>
                 dtp.addProbe('log-' + level, 'char *');
 &nbsp;
             // Explicitly add a reference to dtp to prevent it from being GC'd
-<span class="cstat-no" title="statement not covered" >            probe.dtp = dtp;</span>
+<span class="cstat-no" title="statement not covered">            probe.dtp = dtp;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        dtp.enable();</span>
+<span class="cstat-no" title="statement not covered">        dtp.enable();</span>
     }
 &nbsp;
     // Handle *config* options (i.e. options that are not just plain data
     // for log records).
-<span class="cstat-no" title="statement not covered" >    if (options.stream) {</span>
-<span class="cstat-no" title="statement not covered" >        self.addStream({</span>
+<span class="cstat-no" title="statement not covered">    if (options.stream) {</span>
+<span class="cstat-no" title="statement not covered">        self.addStream({</span>
             type: 'stream',
             stream: options.stream,
             closeOnExit: false,
             level: options.level
         });
-    } else <span class="cstat-no" title="statement not covered" >if (options.streams) {</span>
-<span class="cstat-no" title="statement not covered" >        options.streams.forEach(<span class="fstat-no" title="function not covered" >function (s) {</span></span>
-<span class="cstat-no" title="statement not covered" >            self.addStream(s, options.level);</span>
+    } else <span class="cstat-no" title="statement not covered">if (options.streams) {</span>
+<span class="cstat-no" title="statement not covered">        options.streams.forEach(<span class="fstat-no" title="function not covered">function (s) {</span></span>
+<span class="cstat-no" title="statement not covered">            self.addStream(s, options.level);</span>
         });
-    } else <span class="cstat-no" title="statement not covered" >if (parent &amp;&amp; options.level) {</span>
-<span class="cstat-no" title="statement not covered" >        this.level(options.level);</span>
-    } else <span class="cstat-no" title="statement not covered" >if (!parent) {</span>
-<span class="cstat-no" title="statement not covered" >        if (runtimeEnv === 'browser') {</span>
+    } else <span class="cstat-no" title="statement not covered">if (parent &amp;&amp; options.level) {</span>
+<span class="cstat-no" title="statement not covered">        this.level(options.level);</span>
+    } else <span class="cstat-no" title="statement not covered">if (!parent) {</span>
+<span class="cstat-no" title="statement not covered">        if (runtimeEnv === 'browser') {</span>
             /*
              * In the browser we'll be emitting to console.log by default.
              * Any console.log worth its salt these days can nicely render
@@ -3952,14 +3950,14 @@ var probes = dtrace &amp;&amp; {};
              * so let's emit the raw log record. Are there browsers for which
              * that breaks things?
              */
-<span class="cstat-no" title="statement not covered" >            self.addStream({</span>
+<span class="cstat-no" title="statement not covered">            self.addStream({</span>
                 type: 'raw',
                 stream: new ConsoleRawStream(),
                 closeOnExit: false,
                 level: options.level
             });
         } else {
-<span class="cstat-no" title="statement not covered" >            self.addStream({</span>
+<span class="cstat-no" title="statement not covered">            self.addStream({</span>
                 type: 'stream',
                 stream: process.stdout,
                 closeOnExit: false,
@@ -3967,36 +3965,36 @@ var probes = dtrace &amp;&amp; {};
             });
         }
     }
-<span class="cstat-no" title="statement not covered" >    if (options.serializers) {</span>
-<span class="cstat-no" title="statement not covered" >        self.addSerializers(options.serializers);</span>
+<span class="cstat-no" title="statement not covered">    if (options.serializers) {</span>
+<span class="cstat-no" title="statement not covered">        self.addSerializers(options.serializers);</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (options.src) {</span>
-<span class="cstat-no" title="statement not covered" >        this.src = true;</span>
+<span class="cstat-no" title="statement not covered">    if (options.src) {</span>
+<span class="cstat-no" title="statement not covered">        this.src = true;</span>
     }
-<span class="cstat-no" title="statement not covered" >    xxx('Logger: ', self)</span>
+<span class="cstat-no" title="statement not covered">    xxx('Logger: ', self)</span>
 &nbsp;
     // Fields.
     // These are the default fields for log records (minus the attributes
     // removed in this constructor). To allow storing raw log records
     // (unrendered), `this.fields` must never be mutated. Create a copy for
     // any changes.
-<span class="cstat-no" title="statement not covered" >    var fields = objCopy(options);</span>
-<span class="cstat-no" title="statement not covered" >    delete fields.stream;</span>
-<span class="cstat-no" title="statement not covered" >    delete fields.level;</span>
-<span class="cstat-no" title="statement not covered" >    delete fields.streams;</span>
-<span class="cstat-no" title="statement not covered" >    delete fields.serializers;</span>
-<span class="cstat-no" title="statement not covered" >    delete fields.src;</span>
-<span class="cstat-no" title="statement not covered" >    if (this.serializers) {</span>
-<span class="cstat-no" title="statement not covered" >        this._applySerializers(fields);</span>
+<span class="cstat-no" title="statement not covered">    var fields = objCopy(options);</span>
+<span class="cstat-no" title="statement not covered">    delete fields.stream;</span>
+<span class="cstat-no" title="statement not covered">    delete fields.level;</span>
+<span class="cstat-no" title="statement not covered">    delete fields.streams;</span>
+<span class="cstat-no" title="statement not covered">    delete fields.serializers;</span>
+<span class="cstat-no" title="statement not covered">    delete fields.src;</span>
+<span class="cstat-no" title="statement not covered">    if (this.serializers) {</span>
+<span class="cstat-no" title="statement not covered">        this._applySerializers(fields);</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (!fields.hostname &amp;&amp; !self.fields.hostname) {</span>
-<span class="cstat-no" title="statement not covered" >        fields.hostname = os.hostname();</span>
+<span class="cstat-no" title="statement not covered">    if (!fields.hostname &amp;&amp; !self.fields.hostname) {</span>
+<span class="cstat-no" title="statement not covered">        fields.hostname = os.hostname();</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (!fields.pid) {</span>
-<span class="cstat-no" title="statement not covered" >        fields.pid = process.pid;</span>
+<span class="cstat-no" title="statement not covered">    if (!fields.pid) {</span>
+<span class="cstat-no" title="statement not covered">        fields.pid = process.pid;</span>
     }
-<span class="cstat-no" title="statement not covered" >    Object.keys(fields).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
-<span class="cstat-no" title="statement not covered" >        self.fields[k] = fields[k];</span>
+<span class="cstat-no" title="statement not covered">    Object.keys(fields).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
+<span class="cstat-no" title="statement not covered">        self.fields[k] = fields[k];</span>
     });
 }
 &nbsp;
@@ -4020,88 +4018,88 @@ util.inherits(Logger, EventEmitter);
  * @param defaultLevel {Number|String} Optional. A level to use if
  *      `stream.level` is not set. If neither is given, this defaults to INFO.
  */
-Logger.prototype.addStream = <span class="fstat-no" title="function not covered" >function addStream(s, defaultLevel) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    if (defaultLevel === null || defaultLevel === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        defaultLevel = INFO;</span>
+Logger.prototype.addStream = <span class="fstat-no" title="function not covered">function addStream(s, defaultLevel) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    if (defaultLevel === null || defaultLevel === undefined) {</span>
+<span class="cstat-no" title="statement not covered">        defaultLevel = INFO;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    s = objCopy(s);</span>
+<span class="cstat-no" title="statement not covered">    s = objCopy(s);</span>
 &nbsp;
     // Implicit 'type' from other args.
-<span class="cstat-no" title="statement not covered" >    if (!s.type) {</span>
-<span class="cstat-no" title="statement not covered" >        if (s.stream) {</span>
-<span class="cstat-no" title="statement not covered" >            s.type = 'stream';</span>
-        } else <span class="cstat-no" title="statement not covered" >if (s.path) {</span>
-<span class="cstat-no" title="statement not covered" >            s.type = 'file'</span>
+<span class="cstat-no" title="statement not covered">    if (!s.type) {</span>
+<span class="cstat-no" title="statement not covered">        if (s.stream) {</span>
+<span class="cstat-no" title="statement not covered">            s.type = 'stream';</span>
+        } else <span class="cstat-no" title="statement not covered">if (s.path) {</span>
+<span class="cstat-no" title="statement not covered">            s.type = 'file'</span>
         }
     }
-<span class="cstat-no" title="statement not covered" >    s.raw = (s.type === 'raw'); </span> // PERF: Allow for faster check in `_emit`.
+<span class="cstat-no" title="statement not covered">    s.raw = (s.type === 'raw'); </span> // PERF: Allow for faster check in `_emit`.
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (s.level !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        s.level = resolveLevel(s.level);</span>
+<span class="cstat-no" title="statement not covered">    if (s.level !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">        s.level = resolveLevel(s.level);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        s.level = resolveLevel(defaultLevel);</span>
+<span class="cstat-no" title="statement not covered">        s.level = resolveLevel(defaultLevel);</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (s.level &lt; self._level) {</span>
-<span class="cstat-no" title="statement not covered" >        self._level = s.level;</span>
+<span class="cstat-no" title="statement not covered">    if (s.level &lt; self._level) {</span>
+<span class="cstat-no" title="statement not covered">        self._level = s.level;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    switch (s.type) {</span>
+<span class="cstat-no" title="statement not covered">    switch (s.type) {</span>
     case 'stream':
-<span class="cstat-no" title="statement not covered" >        assert.ok(isWritable(s.stream),</span>
+<span class="cstat-no" title="statement not covered">        assert.ok(isWritable(s.stream),</span>
                   '"stream" stream is not writable: ' + util.inspect(s.stream));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (!s.closeOnExit) {</span>
-<span class="cstat-no" title="statement not covered" >            s.closeOnExit = false;</span>
+<span class="cstat-no" title="statement not covered">        if (!s.closeOnExit) {</span>
+<span class="cstat-no" title="statement not covered">            s.closeOnExit = false;</span>
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'file':
-<span class="cstat-no" title="statement not covered" >        if (s.reemitErrorEvents === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >            s.reemitErrorEvents = true;</span>
+<span class="cstat-no" title="statement not covered">        if (s.reemitErrorEvents === undefined) {</span>
+<span class="cstat-no" title="statement not covered">            s.reemitErrorEvents = true;</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (!s.stream) {</span>
-<span class="cstat-no" title="statement not covered" >            s.stream = fs.createWriteStream(s.path,</span>
+<span class="cstat-no" title="statement not covered">        if (!s.stream) {</span>
+<span class="cstat-no" title="statement not covered">            s.stream = fs.createWriteStream(s.path,</span>
                                             {flags: 'a', encoding: 'utf8'});
-<span class="cstat-no" title="statement not covered" >            if (!s.closeOnExit) {</span>
-<span class="cstat-no" title="statement not covered" >                s.closeOnExit = true;</span>
+<span class="cstat-no" title="statement not covered">            if (!s.closeOnExit) {</span>
+<span class="cstat-no" title="statement not covered">                s.closeOnExit = true;</span>
             }
         } else {
-<span class="cstat-no" title="statement not covered" >            if (!s.closeOnExit) {</span>
-<span class="cstat-no" title="statement not covered" >                s.closeOnExit = false;</span>
+<span class="cstat-no" title="statement not covered">            if (!s.closeOnExit) {</span>
+<span class="cstat-no" title="statement not covered">                s.closeOnExit = false;</span>
             }
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'rotating-file':
-<span class="cstat-no" title="statement not covered" >        assert.ok(!s.stream,</span>
+<span class="cstat-no" title="statement not covered">        assert.ok(!s.stream,</span>
                   '"rotating-file" stream should not give a "stream"');
-<span class="cstat-no" title="statement not covered" >        assert.ok(s.path);</span>
-<span class="cstat-no" title="statement not covered" >        assert.ok(mv, '"rotating-file" stream type is not supported: '</span>
+<span class="cstat-no" title="statement not covered">        assert.ok(s.path);</span>
+<span class="cstat-no" title="statement not covered">        assert.ok(mv, '"rotating-file" stream type is not supported: '</span>
                       + 'missing "mv" module');
-<span class="cstat-no" title="statement not covered" >        s.stream = new RotatingFileStream(s);</span>
-<span class="cstat-no" title="statement not covered" >        if (!s.closeOnExit) {</span>
-<span class="cstat-no" title="statement not covered" >            s.closeOnExit = true;</span>
+<span class="cstat-no" title="statement not covered">        s.stream = new RotatingFileStream(s);</span>
+<span class="cstat-no" title="statement not covered">        if (!s.closeOnExit) {</span>
+<span class="cstat-no" title="statement not covered">            s.closeOnExit = true;</span>
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'raw':
-<span class="cstat-no" title="statement not covered" >        if (!s.closeOnExit) {</span>
-<span class="cstat-no" title="statement not covered" >            s.closeOnExit = false;</span>
+<span class="cstat-no" title="statement not covered">        if (!s.closeOnExit) {</span>
+<span class="cstat-no" title="statement not covered">            s.closeOnExit = false;</span>
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     default:
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('unknown stream type "' + s.type + '"');</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('unknown stream type "' + s.type + '"');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (s.reemitErrorEvents &amp;&amp; typeof (s.stream.on) === 'function') {</span>
+<span class="cstat-no" title="statement not covered">    if (s.reemitErrorEvents &amp;&amp; typeof (s.stream.on) === 'function') {</span>
         // TODO: When we have `&lt;logger&gt;.close()`, it should remove event
         //      listeners to not leak Logger instances.
-<span class="cstat-no" title="statement not covered" >        s.stream.on('error', <span class="fstat-no" title="function not covered" >function onStreamError(err) {</span></span>
-<span class="cstat-no" title="statement not covered" >            self.emit('error', err, s);</span>
+<span class="cstat-no" title="statement not covered">        s.stream.on('error', <span class="fstat-no" title="function not covered">function onStreamError(err) {</span></span>
+<span class="cstat-no" title="statement not covered">            self.emit('error', err, s);</span>
         });
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.streams.push(s);</span>
-<span class="cstat-no" title="statement not covered" >    delete self.haveNonRawStreams; </span> // reset
+<span class="cstat-no" title="statement not covered">    self.streams.push(s);</span>
+<span class="cstat-no" title="statement not covered">    delete self.haveNonRawStreams; </span> // reset
 }
 &nbsp;
 &nbsp;
@@ -4111,20 +4109,20 @@ Logger.prototype.addStream = <span class="fstat-no" title="function not covered"
  * @param serializers {Object} Optional. Object mapping log record field names
  *    to serializing functions. See README.md for details.
  */
-Logger.prototype.addSerializers = <span class="fstat-no" title="function not covered" >function addSerializers(serializers) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+Logger.prototype.addSerializers = <span class="fstat-no" title="function not covered">function addSerializers(serializers) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!self.serializers) {</span>
-<span class="cstat-no" title="statement not covered" >        self.serializers = {};</span>
+<span class="cstat-no" title="statement not covered">    if (!self.serializers) {</span>
+<span class="cstat-no" title="statement not covered">        self.serializers = {};</span>
     }
-<span class="cstat-no" title="statement not covered" >    Object.keys(serializers).forEach(<span class="fstat-no" title="function not covered" >function (field) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var serializer = serializers[field];</span>
-<span class="cstat-no" title="statement not covered" >        if (typeof (serializer) !== 'function') {</span>
-<span class="cstat-no" title="statement not covered" >            throw new TypeError(format(</span>
+<span class="cstat-no" title="statement not covered">    Object.keys(serializers).forEach(<span class="fstat-no" title="function not covered">function (field) {</span></span>
+<span class="cstat-no" title="statement not covered">        var serializer = serializers[field];</span>
+<span class="cstat-no" title="statement not covered">        if (typeof (serializer) !== 'function') {</span>
+<span class="cstat-no" title="statement not covered">            throw new TypeError(format(</span>
                 'invalid serializer for "%s" field: must be a function',
                 field));
         } else {
-<span class="cstat-no" title="statement not covered" >            self.serializers[field] = serializer;</span>
+<span class="cstat-no" title="statement not covered">            self.serializers[field] = serializer;</span>
         }
     });
 }
@@ -4157,8 +4155,8 @@ Logger.prototype.addSerializers = <span class="fstat-no" title="function not cov
  *    required for them. IOW, this is a fast path for frequent child
  *    creation. See 'tools/timechild.js' for numbers.
  */
-Logger.prototype.child = <span class="fstat-no" title="function not covered" >function (options, simple) {</span>
-<span class="cstat-no" title="statement not covered" >    return new (this.constructor)(this, options || {}, simple);</span>
+Logger.prototype.child = <span class="fstat-no" title="function not covered">function (options, simple) {</span>
+<span class="cstat-no" title="statement not covered">    return new (this.constructor)(this, options || {}, simple);</span>
 }
 &nbsp;
 &nbsp;
@@ -4179,21 +4177,21 @@ Logger.prototype.child = <span class="fstat-no" title="function not covered" >fu
  *
  * See &lt;https://github.com/trentm/node-bunyan/issues/104&gt;.
  */
-Logger.prototype.reopenFileStreams = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    self.streams.forEach(<span class="fstat-no" title="function not covered" >function (s) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (s.type === 'file') {</span>
-<span class="cstat-no" title="statement not covered" >            if (s.stream) {</span>
+Logger.prototype.reopenFileStreams = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    self.streams.forEach(<span class="fstat-no" title="function not covered">function (s) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (s.type === 'file') {</span>
+<span class="cstat-no" title="statement not covered">            if (s.stream) {</span>
                 // Not sure if typically would want this, or more immediate
                 // `s.stream.destroy()`.
-<span class="cstat-no" title="statement not covered" >                s.stream.end();</span>
-<span class="cstat-no" title="statement not covered" >                s.stream.destroySoon();</span>
-<span class="cstat-no" title="statement not covered" >                delete s.stream;</span>
+<span class="cstat-no" title="statement not covered">                s.stream.end();</span>
+<span class="cstat-no" title="statement not covered">                s.stream.destroySoon();</span>
+<span class="cstat-no" title="statement not covered">                delete s.stream;</span>
             }
-<span class="cstat-no" title="statement not covered" >            s.stream = fs.createWriteStream(s.path,</span>
+<span class="cstat-no" title="statement not covered">            s.stream = fs.createWriteStream(s.path,</span>
                 {flags: 'a', encoding: 'utf8'});
-<span class="cstat-no" title="statement not covered" >            s.stream.on('error', <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >                self.emit('error', err, s);</span>
+<span class="cstat-no" title="statement not covered">            s.stream.on('error', <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">                self.emit('error', err, s);</span>
             });
         }
     });
@@ -4236,16 +4234,16 @@ Logger.prototype.close = function () {
  *    log.level(INFO)       // set all streams to level INFO
  *    log.level('info')     // can use 'info' et al aliases
  */
-Logger.prototype.level = <span class="fstat-no" title="function not covered" >function level(value) {</span>
-<span class="cstat-no" title="statement not covered" >    if (value === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        return this._level;</span>
+Logger.prototype.level = <span class="fstat-no" title="function not covered">function level(value) {</span>
+<span class="cstat-no" title="statement not covered">    if (value === undefined) {</span>
+<span class="cstat-no" title="statement not covered">        return this._level;</span>
     }
-<span class="cstat-no" title="statement not covered" >    var newLevel = resolveLevel(value);</span>
-<span class="cstat-no" title="statement not covered" >    var len = this.streams.length;</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; len; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        this.streams[i].level = newLevel;</span>
+<span class="cstat-no" title="statement not covered">    var newLevel = resolveLevel(value);</span>
+<span class="cstat-no" title="statement not covered">    var len = this.streams.length;</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered">        this.streams[i].level = newLevel;</span>
     }
-<span class="cstat-no" title="statement not covered" >    this._level = newLevel;</span>
+<span class="cstat-no" title="statement not covered">    this._level = newLevel;</span>
 }
 &nbsp;
 &nbsp;
@@ -4281,38 +4279,38 @@ Logger.prototype.level = <span class="fstat-no" title="function not covered" >fu
  *    If not given, this is a 'get' operation.
  * @throws {Error} If there is no stream with the given name.
  */
-Logger.prototype.levels = <span class="fstat-no" title="function not covered" >function levels(name, value) {</span>
-<span class="cstat-no" title="statement not covered" >    if (name === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        assert.equal(value, undefined);</span>
-<span class="cstat-no" title="statement not covered" >        return this.streams.map(</span>
-<span class="fstat-no" title="function not covered" >            function (s) {</span> <span class="cstat-no" title="statement not covered" >return s.level }</span>);
+Logger.prototype.levels = <span class="fstat-no" title="function not covered">function levels(name, value) {</span>
+<span class="cstat-no" title="statement not covered">    if (name === undefined) {</span>
+<span class="cstat-no" title="statement not covered">        assert.equal(value, undefined);</span>
+<span class="cstat-no" title="statement not covered">        return this.streams.map(</span>
+<span class="fstat-no" title="function not covered">            function (s) {</span> <span class="cstat-no" title="statement not covered">return s.level }</span>);
     }
-<span class="cstat-no" title="statement not covered" >    var stream;</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof (name) === 'number') {</span>
-<span class="cstat-no" title="statement not covered" >        stream = this.streams[name];</span>
-<span class="cstat-no" title="statement not covered" >        if (stream === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('invalid stream index: ' + name);</span>
+<span class="cstat-no" title="statement not covered">    var stream;</span>
+<span class="cstat-no" title="statement not covered">    if (typeof (name) === 'number') {</span>
+<span class="cstat-no" title="statement not covered">        stream = this.streams[name];</span>
+<span class="cstat-no" title="statement not covered">        if (stream === undefined) {</span>
+<span class="cstat-no" title="statement not covered">            throw new Error('invalid stream index: ' + name);</span>
         }
     } else {
-<span class="cstat-no" title="statement not covered" >        var len = this.streams.length;</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; len; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            var s = this.streams[i];</span>
-<span class="cstat-no" title="statement not covered" >            if (s.name === name) {</span>
-<span class="cstat-no" title="statement not covered" >                stream = s;</span>
-<span class="cstat-no" title="statement not covered" >                break;</span>
+<span class="cstat-no" title="statement not covered">        var len = this.streams.length;</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered">            var s = this.streams[i];</span>
+<span class="cstat-no" title="statement not covered">            if (s.name === name) {</span>
+<span class="cstat-no" title="statement not covered">                stream = s;</span>
+<span class="cstat-no" title="statement not covered">                break;</span>
             }
         }
-<span class="cstat-no" title="statement not covered" >        if (!stream) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error(format('no stream with name "%s"', name));</span>
+<span class="cstat-no" title="statement not covered">        if (!stream) {</span>
+<span class="cstat-no" title="statement not covered">            throw new Error(format('no stream with name "%s"', name));</span>
         }
     }
-<span class="cstat-no" title="statement not covered" >    if (value === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        return stream.level;</span>
+<span class="cstat-no" title="statement not covered">    if (value === undefined) {</span>
+<span class="cstat-no" title="statement not covered">        return stream.level;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        var newLevel = resolveLevel(value);</span>
-<span class="cstat-no" title="statement not covered" >        stream.level = newLevel;</span>
-<span class="cstat-no" title="statement not covered" >        if (newLevel &lt; this._level) {</span>
-<span class="cstat-no" title="statement not covered" >            this._level = newLevel;</span>
+<span class="cstat-no" title="statement not covered">        var newLevel = resolveLevel(value);</span>
+<span class="cstat-no" title="statement not covered">        stream.level = newLevel;</span>
+<span class="cstat-no" title="statement not covered">        if (newLevel &lt; this._level) {</span>
+<span class="cstat-no" title="statement not covered">            this._level = newLevel;</span>
         }
     }
 }
@@ -4327,28 +4325,28 @@ Logger.prototype.levels = <span class="fstat-no" title="function not covered" >f
  * @param excludeFields (Object) Optional mapping of keys to `true` for
  *    keys to NOT apply a serializer.
  */
-Logger.prototype._applySerializers = <span class="fstat-no" title="function not covered" >function (fields, excludeFields) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+Logger.prototype._applySerializers = <span class="fstat-no" title="function not covered">function (fields, excludeFields) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    xxx('_applySerializers: excludeFields', excludeFields);</span>
+<span class="cstat-no" title="statement not covered">    xxx('_applySerializers: excludeFields', excludeFields);</span>
 &nbsp;
     // Check each serializer against these (presuming number of serializers
     // is typically less than number of fields).
-<span class="cstat-no" title="statement not covered" >    Object.keys(this.serializers).forEach(<span class="fstat-no" title="function not covered" >function (name) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (fields[name] === undefined ||</span>
+<span class="cstat-no" title="statement not covered">    Object.keys(this.serializers).forEach(<span class="fstat-no" title="function not covered">function (name) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (fields[name] === undefined ||</span>
             (excludeFields &amp;&amp; excludeFields[name]))
         {
-<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="cstat-no" title="statement not covered">            return;</span>
         }
-<span class="cstat-no" title="statement not covered" >        xxx('_applySerializers; apply to "%s" key', name)</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            fields[name] = self.serializers[name](fields[name]);</span>
+<span class="cstat-no" title="statement not covered">        xxx('_applySerializers; apply to "%s" key', name)</span>
+<span class="cstat-no" title="statement not covered">        try {</span>
+<span class="cstat-no" title="statement not covered">            fields[name] = self.serializers[name](fields[name]);</span>
         } catch (err) {
-<span class="cstat-no" title="statement not covered" >            _warn(format('bunyan: ERROR: Exception thrown from the "%s" '</span>
+<span class="cstat-no" title="statement not covered">            _warn(format('bunyan: ERROR: Exception thrown from the "%s" '</span>
                 + 'Bunyan serializer. This should never happen. This is a bug '
                 + 'in that serializer function.\n%s',
                 name, err.stack || err));
-<span class="cstat-no" title="statement not covered" >            fields[name] = format('(Error in Bunyan log "%s" serializer '</span>
+<span class="cstat-no" title="statement not covered">            fields[name] = format('(Error in Bunyan log "%s" serializer '</span>
                 + 'broke field. See stderr for details.)', name);
         }
     });
@@ -4362,41 +4360,41 @@ Logger.prototype._applySerializers = <span class="fstat-no" title="function not 
  * @param noemit {Boolean} Optional. Set to true to skip emission
  *      and just return the JSON string.
  */
-Logger.prototype._emit = <span class="fstat-no" title="function not covered" >function (rec, noemit) {</span>
-<span class="cstat-no" title="statement not covered" >    var i;</span>
+Logger.prototype._emit = <span class="fstat-no" title="function not covered">function (rec, noemit) {</span>
+<span class="cstat-no" title="statement not covered">    var i;</span>
 &nbsp;
     // Lazily determine if this Logger has non-'raw' streams. If there are
     // any, then we need to stringify the log record.
-<span class="cstat-no" title="statement not covered" >    if (this.haveNonRawStreams === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        this.haveNonRawStreams = false;</span>
-<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; this.streams.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            if (!this.streams[i].raw) {</span>
-<span class="cstat-no" title="statement not covered" >                this.haveNonRawStreams = true;</span>
-<span class="cstat-no" title="statement not covered" >                break;</span>
+<span class="cstat-no" title="statement not covered">    if (this.haveNonRawStreams === undefined) {</span>
+<span class="cstat-no" title="statement not covered">        this.haveNonRawStreams = false;</span>
+<span class="cstat-no" title="statement not covered">        for (i = 0; i &lt; this.streams.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            if (!this.streams[i].raw) {</span>
+<span class="cstat-no" title="statement not covered">                this.haveNonRawStreams = true;</span>
+<span class="cstat-no" title="statement not covered">                break;</span>
             }
         }
     }
 &nbsp;
     // Stringify the object (creates a warning str on error).
-<span class="cstat-no" title="statement not covered" >    var str;</span>
-<span class="cstat-no" title="statement not covered" >    if (noemit || this.haveNonRawStreams) {</span>
-<span class="cstat-no" title="statement not covered" >        str = fastAndSafeJsonStringify(rec) + '\n';</span>
+<span class="cstat-no" title="statement not covered">    var str;</span>
+<span class="cstat-no" title="statement not covered">    if (noemit || this.haveNonRawStreams) {</span>
+<span class="cstat-no" title="statement not covered">        str = fastAndSafeJsonStringify(rec) + '\n';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (noemit)</span>
-<span class="cstat-no" title="statement not covered" >        return str;</span>
+<span class="cstat-no" title="statement not covered">    if (noemit)</span>
+<span class="cstat-no" title="statement not covered">        return str;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var level = rec.level;</span>
-<span class="cstat-no" title="statement not covered" >    for (i = 0; i &lt; this.streams.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        var s = this.streams[i];</span>
-<span class="cstat-no" title="statement not covered" >        if (s.level &lt;= level) {</span>
-<span class="cstat-no" title="statement not covered" >            xxx('writing log rec "%s" to "%s" stream (%d &lt;= %d): %j',</span>
+<span class="cstat-no" title="statement not covered">    var level = rec.level;</span>
+<span class="cstat-no" title="statement not covered">    for (i = 0; i &lt; this.streams.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        var s = this.streams[i];</span>
+<span class="cstat-no" title="statement not covered">        if (s.level &lt;= level) {</span>
+<span class="cstat-no" title="statement not covered">            xxx('writing log rec "%s" to "%s" stream (%d &lt;= %d): %j',</span>
                 rec.msg, s.type, s.level, level, rec);
-<span class="cstat-no" title="statement not covered" >            s.stream.write(s.raw ? rec : str);</span>
+<span class="cstat-no" title="statement not covered">            s.stream.write(s.raw ? rec : str);</span>
         }
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return str;</span>
+<span class="cstat-no" title="statement not covered">    return str;</span>
 }
 &nbsp;
 &nbsp;
@@ -4404,66 +4402,66 @@ Logger.prototype._emit = <span class="fstat-no" title="function not covered" >fu
  * Build a record object suitable for emitting from the arguments
  * provided to the a log emitter.
  */
-<span class="fstat-no" title="function not covered" >function mkRecord(log, minLevel, args) {</span>
-<span class="cstat-no" title="statement not covered" >    var excludeFields, fields, msgArgs;</span>
-<span class="cstat-no" title="statement not covered" >    if (args[0] instanceof Error) {</span>
+<span class="fstat-no" title="function not covered">function mkRecord(log, minLevel, args) {</span>
+<span class="cstat-no" title="statement not covered">    var excludeFields, fields, msgArgs;</span>
+<span class="cstat-no" title="statement not covered">    if (args[0] instanceof Error) {</span>
         // `log.&lt;level&gt;(err, ...)`
-<span class="cstat-no" title="statement not covered" >        fields = {</span>
+<span class="cstat-no" title="statement not covered">        fields = {</span>
             // Use this Logger's err serializer, if defined.
             err: (log.serializers &amp;&amp; log.serializers.err
                 ? log.serializers.err(args[0])
                 : Logger.stdSerializers.err(args[0]))
         };
-<span class="cstat-no" title="statement not covered" >        excludeFields = {err: true};</span>
-<span class="cstat-no" title="statement not covered" >        if (args.length === 1) {</span>
-<span class="cstat-no" title="statement not covered" >            msgArgs = [fields.err.message];</span>
+<span class="cstat-no" title="statement not covered">        excludeFields = {err: true};</span>
+<span class="cstat-no" title="statement not covered">        if (args.length === 1) {</span>
+<span class="cstat-no" title="statement not covered">            msgArgs = [fields.err.message];</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            msgArgs = args.slice(1);</span>
+<span class="cstat-no" title="statement not covered">            msgArgs = args.slice(1);</span>
         }
-    } else <span class="cstat-no" title="statement not covered" >if (typeof (args[0]) !== 'object' || Array.isArray(args[0])) {</span>
+    } else <span class="cstat-no" title="statement not covered">if (typeof (args[0]) !== 'object' || Array.isArray(args[0])) {</span>
         // `log.&lt;level&gt;(msg, ...)`
-<span class="cstat-no" title="statement not covered" >        fields = null;</span>
-<span class="cstat-no" title="statement not covered" >        msgArgs = args.slice();</span>
-    } else <span class="cstat-no" title="statement not covered" >if (Buffer.isBuffer(args[0])) {  // `log.&lt;level&gt;(buf, ...)`</span>
+<span class="cstat-no" title="statement not covered">        fields = null;</span>
+<span class="cstat-no" title="statement not covered">        msgArgs = args.slice();</span>
+    } else <span class="cstat-no" title="statement not covered">if (Buffer.isBuffer(args[0])) {  // `log.&lt;level&gt;(buf, ...)`</span>
         // Almost certainly an error, show `inspect(buf)`. See bunyan
         // issue #35.
-<span class="cstat-no" title="statement not covered" >        fields = null;</span>
-<span class="cstat-no" title="statement not covered" >        msgArgs = args.slice();</span>
-<span class="cstat-no" title="statement not covered" >        msgArgs[0] = util.inspect(msgArgs[0]);</span>
+<span class="cstat-no" title="statement not covered">        fields = null;</span>
+<span class="cstat-no" title="statement not covered">        msgArgs = args.slice();</span>
+<span class="cstat-no" title="statement not covered">        msgArgs[0] = util.inspect(msgArgs[0]);</span>
     } else {  // `log.&lt;level&gt;(fields, msg, ...)`
-<span class="cstat-no" title="statement not covered" >        fields = args[0];</span>
-<span class="cstat-no" title="statement not covered" >        if (fields &amp;&amp; args.length === 1 &amp;&amp; fields.err &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">        fields = args[0];</span>
+<span class="cstat-no" title="statement not covered">        if (fields &amp;&amp; args.length === 1 &amp;&amp; fields.err &amp;&amp;</span>
             fields.err instanceof Error)
         {
-<span class="cstat-no" title="statement not covered" >            msgArgs = [fields.err.message];</span>
+<span class="cstat-no" title="statement not covered">            msgArgs = [fields.err.message];</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            msgArgs = args.slice(1);</span>
+<span class="cstat-no" title="statement not covered">            msgArgs = args.slice(1);</span>
         }
     }
 &nbsp;
     // Build up the record object.
-<span class="cstat-no" title="statement not covered" >    var rec = objCopy(log.fields);</span>
-<span class="cstat-no" title="statement not covered" >    var level = rec.level = minLevel;</span>
-<span class="cstat-no" title="statement not covered" >    var recFields = (fields ? objCopy(fields) : null);</span>
-<span class="cstat-no" title="statement not covered" >    if (recFields) {</span>
-<span class="cstat-no" title="statement not covered" >        if (log.serializers) {</span>
-<span class="cstat-no" title="statement not covered" >            log._applySerializers(recFields, excludeFields);</span>
+<span class="cstat-no" title="statement not covered">    var rec = objCopy(log.fields);</span>
+<span class="cstat-no" title="statement not covered">    var level = rec.level = minLevel;</span>
+<span class="cstat-no" title="statement not covered">    var recFields = (fields ? objCopy(fields) : null);</span>
+<span class="cstat-no" title="statement not covered">    if (recFields) {</span>
+<span class="cstat-no" title="statement not covered">        if (log.serializers) {</span>
+<span class="cstat-no" title="statement not covered">            log._applySerializers(recFields, excludeFields);</span>
         }
-<span class="cstat-no" title="statement not covered" >        Object.keys(recFields).forEach(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
-<span class="cstat-no" title="statement not covered" >            rec[k] = recFields[k];</span>
+<span class="cstat-no" title="statement not covered">        Object.keys(recFields).forEach(<span class="fstat-no" title="function not covered">function (k) {</span></span>
+<span class="cstat-no" title="statement not covered">            rec[k] = recFields[k];</span>
         });
     }
-<span class="cstat-no" title="statement not covered" >    rec.msg = format.apply(log, msgArgs);</span>
-<span class="cstat-no" title="statement not covered" >    if (!rec.time) {</span>
-<span class="cstat-no" title="statement not covered" >        rec.time = (new Date());</span>
+<span class="cstat-no" title="statement not covered">    rec.msg = format.apply(log, msgArgs);</span>
+<span class="cstat-no" title="statement not covered">    if (!rec.time) {</span>
+<span class="cstat-no" title="statement not covered">        rec.time = (new Date());</span>
     }
     // Get call source info
-<span class="cstat-no" title="statement not covered" >    if (log.src &amp;&amp; !rec.src) {</span>
-<span class="cstat-no" title="statement not covered" >        rec.src = getCaller3Info()</span>
+<span class="cstat-no" title="statement not covered">    if (log.src &amp;&amp; !rec.src) {</span>
+<span class="cstat-no" title="statement not covered">        rec.src = getCaller3Info()</span>
     }
-<span class="cstat-no" title="statement not covered" >    rec.v = LOG_VERSION;</span>
+<span class="cstat-no" title="statement not covered">    rec.v = LOG_VERSION;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return rec;</span>
+<span class="cstat-no" title="statement not covered">    return rec;</span>
 };
 &nbsp;
 &nbsp;
@@ -4472,8 +4470,8 @@ Logger.prototype._emit = <span class="fstat-no" title="function not covered" >fu
  * already built the appropriate string, we use it. Otherwise, build the
  * record object and stringify it.
  */
-<span class="fstat-no" title="function not covered" >function mkProbeArgs(str, log, minLevel, msgArgs) {</span>
-<span class="cstat-no" title="statement not covered" >    return [ str || log._emit(mkRecord(log, minLevel, msgArgs), true) ];</span>
+<span class="fstat-no" title="function not covered">function mkProbeArgs(str, log, minLevel, msgArgs) {</span>
+<span class="cstat-no" title="statement not covered">    return [ str || log._emit(mkRecord(log, minLevel, msgArgs), true) ];</span>
 }
 &nbsp;
 &nbsp;
@@ -4482,43 +4480,43 @@ Logger.prototype._emit = <span class="fstat-no" title="function not covered" >fu
  * creator of `log.info`, `log.error`, etc.
  */
 function mkLogEmitter(minLevel) {
-    return <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >        var log = this;</span>
-<span class="cstat-no" title="statement not covered" >        var str = null;</span>
-<span class="cstat-no" title="statement not covered" >        var rec = null;</span>
+    return <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">        var log = this;</span>
+<span class="cstat-no" title="statement not covered">        var str = null;</span>
+<span class="cstat-no" title="statement not covered">        var rec = null;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (!this._emit) {</span>
+<span class="cstat-no" title="statement not covered">        if (!this._emit) {</span>
             /*
              * Show this invalid Bunyan usage warning *once*.
              *
              * See &lt;https://github.com/trentm/node-bunyan/issues/100&gt; for
              * an example of how this can happen.
              */
-<span class="cstat-no" title="statement not covered" >            var dedupKey = 'unbound';</span>
-<span class="cstat-no" title="statement not covered" >            if (!_haveWarned[dedupKey]) {</span>
-<span class="cstat-no" title="statement not covered" >                var caller = getCaller3Info();</span>
-<span class="cstat-no" title="statement not covered" >                _warn(format('bunyan usage error: %s:%s: attempt to log '</span>
+<span class="cstat-no" title="statement not covered">            var dedupKey = 'unbound';</span>
+<span class="cstat-no" title="statement not covered">            if (!_haveWarned[dedupKey]) {</span>
+<span class="cstat-no" title="statement not covered">                var caller = getCaller3Info();</span>
+<span class="cstat-no" title="statement not covered">                _warn(format('bunyan usage error: %s:%s: attempt to log '</span>
                     + 'with an unbound log method: `this` is: %s',
                     caller.file, caller.line, util.inspect(this)),
                     dedupKey);
             }
-<span class="cstat-no" title="statement not covered" >            return;</span>
-        } else <span class="cstat-no" title="statement not covered" >if (arguments.length === 0) {   // `log.&lt;level&gt;()`</span>
-<span class="cstat-no" title="statement not covered" >            return (this._level &lt;= minLevel);</span>
+<span class="cstat-no" title="statement not covered">            return;</span>
+        } else <span class="cstat-no" title="statement not covered">if (arguments.length === 0) {   // `log.&lt;level&gt;()`</span>
+<span class="cstat-no" title="statement not covered">            return (this._level &lt;= minLevel);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var msgArgs = new Array(arguments.length);</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; msgArgs.length; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >            msgArgs[i] = arguments[i];</span>
+<span class="cstat-no" title="statement not covered">        var msgArgs = new Array(arguments.length);</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; msgArgs.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered">            msgArgs[i] = arguments[i];</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (this._level &lt;= minLevel) {</span>
-<span class="cstat-no" title="statement not covered" >            rec = mkRecord(log, minLevel, msgArgs);</span>
-<span class="cstat-no" title="statement not covered" >            str = this._emit(rec);</span>
+<span class="cstat-no" title="statement not covered">        if (this._level &lt;= minLevel) {</span>
+<span class="cstat-no" title="statement not covered">            rec = mkRecord(log, minLevel, msgArgs);</span>
+<span class="cstat-no" title="statement not covered">            str = this._emit(rec);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (probes) {</span>
-<span class="cstat-no" title="statement not covered" >            probes[minLevel].fire(mkProbeArgs, str, log, minLevel, msgArgs);</span>
+<span class="cstat-no" title="statement not covered">        if (probes) {</span>
+<span class="cstat-no" title="statement not covered">            probes[minLevel].fire(mkProbeArgs, str, log, minLevel, msgArgs);</span>
         }
     }
 }
@@ -4559,10 +4557,10 @@ Logger.prototype.fatal = mkLogEmitter(FATAL);
 Logger.stdSerializers = {};
 &nbsp;
 // Serialize an HTTP request.
-Logger.stdSerializers.req = <span class="fstat-no" title="function not covered" >function (req) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!req || !req.connection)</span>
-<span class="cstat-no" title="statement not covered" >        return req;</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+Logger.stdSerializers.req = <span class="fstat-no" title="function not covered">function (req) {</span>
+<span class="cstat-no" title="statement not covered">    if (!req || !req.connection)</span>
+<span class="cstat-no" title="statement not covered">        return req;</span>
+<span class="cstat-no" title="statement not covered">    return {</span>
         method: req.method,
         url: req.url,
         headers: req.headers,
@@ -4577,10 +4575,10 @@ Logger.stdSerializers.req = <span class="fstat-no" title="function not covered" 
 };
 &nbsp;
 // Serialize an HTTP response.
-Logger.stdSerializers.res = <span class="fstat-no" title="function not covered" >function (res) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!res || !res.statusCode)</span>
-<span class="cstat-no" title="statement not covered" >        return res;</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+Logger.stdSerializers.res = <span class="fstat-no" title="function not covered">function (res) {</span>
+<span class="cstat-no" title="statement not covered">    if (!res || !res.statusCode)</span>
+<span class="cstat-no" title="statement not covered">        return res;</span>
+<span class="cstat-no" title="statement not covered">    return {</span>
         statusCode: res.statusCode,
         header: res._header
     }
@@ -4596,46 +4594,46 @@ Logger.stdSerializers.res = <span class="fstat-no" title="function not covered" 
  * Based on `dumpException` in
  * https://github.com/davepacheco/node-extsprintf/blob/master/lib/extsprintf.js
  */
-<span class="fstat-no" title="function not covered" >function getFullErrorStack(ex)</span>
+<span class="fstat-no" title="function not covered">function getFullErrorStack(ex)</span>
 {
-<span class="cstat-no" title="statement not covered" >    var ret = ex.stack || ex.toString();</span>
-<span class="cstat-no" title="statement not covered" >    if (ex.cause &amp;&amp; typeof (ex.cause) === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >        var cex = ex.cause();</span>
-<span class="cstat-no" title="statement not covered" >        if (cex) {</span>
-<span class="cstat-no" title="statement not covered" >            ret += '\nCaused by: ' + getFullErrorStack(cex);</span>
+<span class="cstat-no" title="statement not covered">    var ret = ex.stack || ex.toString();</span>
+<span class="cstat-no" title="statement not covered">    if (ex.cause &amp;&amp; typeof (ex.cause) === 'function') {</span>
+<span class="cstat-no" title="statement not covered">        var cex = ex.cause();</span>
+<span class="cstat-no" title="statement not covered">        if (cex) {</span>
+<span class="cstat-no" title="statement not covered">            ret += '\nCaused by: ' + getFullErrorStack(cex);</span>
         }
     }
-<span class="cstat-no" title="statement not covered" >    return (ret);</span>
+<span class="cstat-no" title="statement not covered">    return (ret);</span>
 }
 &nbsp;
 // Serialize an Error object
 // (Core error properties are enumerable in node 0.4, not in 0.6).
-var errSerializer = Logger.stdSerializers.err = <span class="fstat-no" title="function not covered" >function (err) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!err || !err.stack)</span>
-<span class="cstat-no" title="statement not covered" >        return err;</span>
-<span class="cstat-no" title="statement not covered" >    var obj = {</span>
+var errSerializer = Logger.stdSerializers.err = <span class="fstat-no" title="function not covered">function (err) {</span>
+<span class="cstat-no" title="statement not covered">    if (!err || !err.stack)</span>
+<span class="cstat-no" title="statement not covered">        return err;</span>
+<span class="cstat-no" title="statement not covered">    var obj = {</span>
         message: err.message,
         name: err.name,
         stack: getFullErrorStack(err),
         code: err.code,
         signal: err.signal
     }
-<span class="cstat-no" title="statement not covered" >    return obj;</span>
+<span class="cstat-no" title="statement not covered">    return obj;</span>
 };
 &nbsp;
 &nbsp;
 // A JSON stringifier that handles cycles safely - tracks seen values in a Set.
-<span class="fstat-no" title="function not covered" >function safeCyclesSet() {</span>
-<span class="cstat-no" title="statement not covered" >    var seen = new Set();</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function (key, val) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (!val || typeof (val) !== 'object') {</span>
-<span class="cstat-no" title="statement not covered" >            return val;</span>
+<span class="fstat-no" title="function not covered">function safeCyclesSet() {</span>
+<span class="cstat-no" title="statement not covered">    var seen = new Set();</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function (key, val) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (!val || typeof (val) !== 'object') {</span>
+<span class="cstat-no" title="statement not covered">            return val;</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (seen.has(val)) {</span>
-<span class="cstat-no" title="statement not covered" >            return '[Circular]';</span>
+<span class="cstat-no" title="statement not covered">        if (seen.has(val)) {</span>
+<span class="cstat-no" title="statement not covered">            return '[Circular]';</span>
         }
-<span class="cstat-no" title="statement not covered" >        seen.add(val);</span>
-<span class="cstat-no" title="statement not covered" >        return val;</span>
+<span class="cstat-no" title="statement not covered">        seen.add(val);</span>
+<span class="cstat-no" title="statement not covered">        return val;</span>
     };
 }
 &nbsp;
@@ -4647,17 +4645,17 @@ var errSerializer = Logger.stdSerializers.err = <span class="fstat-no" title="fu
  * and earlier (as Set was introduced in Node 0.12), it's used as a fallback
  * when Set is not available.
  */
-<span class="fstat-no" title="function not covered" >function safeCyclesArray() {</span>
-<span class="cstat-no" title="statement not covered" >    var seen = [];</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function (key, val) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (!val || typeof (val) !== 'object') {</span>
-<span class="cstat-no" title="statement not covered" >            return val;</span>
+<span class="fstat-no" title="function not covered">function safeCyclesArray() {</span>
+<span class="cstat-no" title="statement not covered">    var seen = [];</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function (key, val) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (!val || typeof (val) !== 'object') {</span>
+<span class="cstat-no" title="statement not covered">            return val;</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (seen.indexOf(val) !== -1) {</span>
-<span class="cstat-no" title="statement not covered" >            return '[Circular]';</span>
+<span class="cstat-no" title="statement not covered">        if (seen.indexOf(val) !== -1) {</span>
+<span class="cstat-no" title="statement not covered">            return '[Circular]';</span>
         }
-<span class="cstat-no" title="statement not covered" >        seen.push(val);</span>
-<span class="cstat-no" title="statement not covered" >        return val;</span>
+<span class="cstat-no" title="statement not covered">        seen.push(val);</span>
+<span class="cstat-no" title="statement not covered">        return val;</span>
     };
 }
 &nbsp;
@@ -4669,7 +4667,7 @@ var errSerializer = Logger.stdSerializers.err = <span class="fstat-no" title="fu
  * Choose the best safe cycle function from what is available - see
  * trentm/node-bunyan#445.
  */
-var safeCycles = typeof (Set) !== 'undefined' ? safeCyclesSet : <span class="branch-1 cbranch-no" title="branch not covered" >safeCyclesArray;</span>
+var safeCycles = typeof (Set) !== 'undefined' ? safeCyclesSet : <span class="branch-1 cbranch-no" title="branch not covered">safeCyclesArray;</span>
 &nbsp;
 /**
  * A fast JSON.stringify that handles cycles and getter exceptions (when
@@ -4679,24 +4677,24 @@ var safeCycles = typeof (Set) !== 'undefined' ? safeCyclesSet : <span class="bra
  * error (e.g. JSON cycle detection exception) it falls back to safe stringify
  * handlers that can deal with cycles and/or getter exceptions.
  */
-<span class="fstat-no" title="function not covered" >function fastAndSafeJsonStringify(rec) {</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >        return JSON.stringify(rec);</span>
+<span class="fstat-no" title="function not covered">function fastAndSafeJsonStringify(rec) {</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">        return JSON.stringify(rec);</span>
     } catch (ex) {
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            return JSON.stringify(rec, safeCycles());</span>
+<span class="cstat-no" title="statement not covered">        try {</span>
+<span class="cstat-no" title="statement not covered">            return JSON.stringify(rec, safeCycles());</span>
         } catch (e) {
-<span class="cstat-no" title="statement not covered" >            if (safeJsonStringify) {</span>
-<span class="cstat-no" title="statement not covered" >                return safeJsonStringify(rec);</span>
+<span class="cstat-no" title="statement not covered">            if (safeJsonStringify) {</span>
+<span class="cstat-no" title="statement not covered">                return safeJsonStringify(rec);</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                var dedupKey = e.stack.split(/\n/g, 3).join('\n');</span>
-<span class="cstat-no" title="statement not covered" >                _warn('bunyan: ERROR: Exception in '</span>
+<span class="cstat-no" title="statement not covered">                var dedupKey = e.stack.split(/\n/g, 3).join('\n');</span>
+<span class="cstat-no" title="statement not covered">                _warn('bunyan: ERROR: Exception in '</span>
                     + '`JSON.stringify(rec)`. You can install the '
                     + '"safe-json-stringify" module to have Bunyan fallback '
                     + 'to safer stringification. Record:\n'
                     + _indent(format('%s\n%s', util.inspect(rec), e.stack)),
                     dedupKey);
-<span class="cstat-no" title="statement not covered" >                return format('(Exception in JSON.stringify(rec): %j. '</span>
+<span class="cstat-no" title="statement not covered">                return format('(Exception in JSON.stringify(rec): %j. '</span>
                     + 'See stderr for details.)', e.message);
             }
         }
@@ -4705,21 +4703,21 @@ var safeCycles = typeof (Set) !== 'undefined' ? safeCyclesSet : <span class="bra
 &nbsp;
 &nbsp;
 var RotatingFileStream = null;
-<span class="missing-if-branch" title="else path not taken" >E</span>if (mv) {
+<span class="missing-if-branch" title="else path not taken">E</span>if (mv) {
 &nbsp;
-RotatingFileStream = <span class="fstat-no" title="function not covered" >function RotatingFileStream(options) {</span>
-<span class="cstat-no" title="statement not covered" >    this.path = options.path;</span>
+RotatingFileStream = <span class="fstat-no" title="function not covered">function RotatingFileStream(options) {</span>
+<span class="cstat-no" title="statement not covered">    this.path = options.path;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.count = (options.count == null ? 10 : options.count);</span>
-<span class="cstat-no" title="statement not covered" >    assert.equal(typeof (this.count), 'number',</span>
+<span class="cstat-no" title="statement not covered">    this.count = (options.count == null ? 10 : options.count);</span>
+<span class="cstat-no" title="statement not covered">    assert.equal(typeof (this.count), 'number',</span>
         format('rotating-file stream "count" is not a number: %j (%s) in %j',
             this.count, typeof (this.count), this));
-<span class="cstat-no" title="statement not covered" >    assert.ok(this.count &gt;= 0,</span>
+<span class="cstat-no" title="statement not covered">    assert.ok(this.count &gt;= 0,</span>
         format('rotating-file stream "count" is not &gt;= 0: %j in %j',
             this.count, this));
 &nbsp;
     // Parse `options.period`.
-<span class="cstat-no" title="statement not covered" >    if (options.period) {</span>
+<span class="cstat-no" title="statement not covered">    if (options.period) {</span>
         // &lt;number&gt;&lt;scope&gt; where scope is:
         //    h   hours (at the start of the hour)
         //    d   days (at the start of the day, i.e. just after midnight)
@@ -4728,37 +4726,37 @@ RotatingFileStream = <span class="fstat-no" title="function not covered" >functi
         //    y   years (at the start of Jan 1st)
         // with special values 'hourly' (1h), 'daily' (1d), "weekly" (1w),
         // 'monthly' (1m) and 'yearly' (1y)
-<span class="cstat-no" title="statement not covered" >        var period = {</span>
+<span class="cstat-no" title="statement not covered">        var period = {</span>
             'hourly': '1h',
             'daily': '1d',
             'weekly': '1w',
             'monthly': '1m',
             'yearly': '1y'
         }[options.period] || options.period;
-<span class="cstat-no" title="statement not covered" >        var m = /^([1-9][0-9]*)([hdwmy]|ms)$/.exec(period);</span>
-<span class="cstat-no" title="statement not covered" >        if (!m) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error(format('invalid period: "%s"', options.period));</span>
+<span class="cstat-no" title="statement not covered">        var m = /^([1-9][0-9]*)([hdwmy]|ms)$/.exec(period);</span>
+<span class="cstat-no" title="statement not covered">        if (!m) {</span>
+<span class="cstat-no" title="statement not covered">            throw new Error(format('invalid period: "%s"', options.period));</span>
         }
-<span class="cstat-no" title="statement not covered" >        this.periodNum = Number(m[1]);</span>
-<span class="cstat-no" title="statement not covered" >        this.periodScope = m[2];</span>
+<span class="cstat-no" title="statement not covered">        this.periodNum = Number(m[1]);</span>
+<span class="cstat-no" title="statement not covered">        this.periodScope = m[2];</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        this.periodNum = 1;</span>
-<span class="cstat-no" title="statement not covered" >        this.periodScope = 'd';</span>
+<span class="cstat-no" title="statement not covered">        this.periodNum = 1;</span>
+<span class="cstat-no" title="statement not covered">        this.periodScope = 'd';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var lastModified = null;</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >        var fileInfo = fs.statSync(this.path);</span>
-<span class="cstat-no" title="statement not covered" >        lastModified = fileInfo.mtime.getTime();</span>
+<span class="cstat-no" title="statement not covered">    var lastModified = null;</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">        var fileInfo = fs.statSync(this.path);</span>
+<span class="cstat-no" title="statement not covered">        lastModified = fileInfo.mtime.getTime();</span>
     }
     catch (err) {
         // file doesn't exist
     }
-<span class="cstat-no" title="statement not covered" >    var rotateAfterOpen = false;</span>
-<span class="cstat-no" title="statement not covered" >    if (lastModified) {</span>
-<span class="cstat-no" title="statement not covered" >        var lastRotTime = this._calcRotTime(0);</span>
-<span class="cstat-no" title="statement not covered" >        if (lastModified &lt; lastRotTime) {</span>
-<span class="cstat-no" title="statement not covered" >            rotateAfterOpen = true;</span>
+<span class="cstat-no" title="statement not covered">    var rotateAfterOpen = false;</span>
+<span class="cstat-no" title="statement not covered">    if (lastModified) {</span>
+<span class="cstat-no" title="statement not covered">        var lastRotTime = this._calcRotTime(0);</span>
+<span class="cstat-no" title="statement not covered">        if (lastModified &lt; lastRotTime) {</span>
+<span class="cstat-no" title="statement not covered">            rotateAfterOpen = true;</span>
         }
     }
 &nbsp;
@@ -4778,246 +4776,246 @@ RotatingFileStream = <span class="fstat-no" title="function not covered" >functi
     //                          prior art? Want to avoid ':' in
     //                          filenames (illegal on Windows for one).
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.stream = fs.createWriteStream(this.path,</span>
+<span class="cstat-no" title="statement not covered">    this.stream = fs.createWriteStream(this.path,</span>
         {flags: 'a', encoding: 'utf8'});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.rotQueue = [];</span>
-<span class="cstat-no" title="statement not covered" >    this.rotating = false;</span>
-<span class="cstat-no" title="statement not covered" >    if (rotateAfterOpen) {</span>
-<span class="cstat-no" title="statement not covered" >        this._debug('rotateAfterOpen -&gt; call rotate()');</span>
-<span class="cstat-no" title="statement not covered" >        this.rotate();</span>
+<span class="cstat-no" title="statement not covered">    this.rotQueue = [];</span>
+<span class="cstat-no" title="statement not covered">    this.rotating = false;</span>
+<span class="cstat-no" title="statement not covered">    if (rotateAfterOpen) {</span>
+<span class="cstat-no" title="statement not covered">        this._debug('rotateAfterOpen -&gt; call rotate()');</span>
+<span class="cstat-no" title="statement not covered">        this.rotate();</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        this._setupNextRot();</span>
+<span class="cstat-no" title="statement not covered">        this._setupNextRot();</span>
     }
 }
 &nbsp;
 util.inherits(RotatingFileStream, EventEmitter);
 &nbsp;
-RotatingFileStream.prototype._debug = <span class="fstat-no" title="function not covered" >function () {</span>
+RotatingFileStream.prototype._debug = <span class="fstat-no" title="function not covered">function () {</span>
     // Set this to `true` to add debug logging.
-<span class="cstat-no" title="statement not covered" >    if (false) {</span>
-<span class="cstat-no" title="statement not covered" >        if (arguments.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >            return true;</span>
+<span class="cstat-no" title="statement not covered">    if (false) {</span>
+<span class="cstat-no" title="statement not covered">        if (arguments.length === 0) {</span>
+<span class="cstat-no" title="statement not covered">            return true;</span>
         }
-<span class="cstat-no" title="statement not covered" >        var args = Array.prototype.slice.call(arguments);</span>
-<span class="cstat-no" title="statement not covered" >        args[0] = '[' + (new Date().toISOString()) + ', '</span>
+<span class="cstat-no" title="statement not covered">        var args = Array.prototype.slice.call(arguments);</span>
+<span class="cstat-no" title="statement not covered">        args[0] = '[' + (new Date().toISOString()) + ', '</span>
             + this.path + '] ' + args[0];
-<span class="cstat-no" title="statement not covered" >        console.log.apply(this, args);</span>
+<span class="cstat-no" title="statement not covered">        console.log.apply(this, args);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        return false;</span>
+<span class="cstat-no" title="statement not covered">        return false;</span>
     }
 };
 &nbsp;
-RotatingFileStream.prototype._setupNextRot = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    this.rotAt = this._calcRotTime(1);</span>
-<span class="cstat-no" title="statement not covered" >    this._setRotationTimer();</span>
+RotatingFileStream.prototype._setupNextRot = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    this.rotAt = this._calcRotTime(1);</span>
+<span class="cstat-no" title="statement not covered">    this._setRotationTimer();</span>
 }
 &nbsp;
-RotatingFileStream.prototype._setRotationTimer = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    var delay = this.rotAt - Date.now();</span>
+RotatingFileStream.prototype._setRotationTimer = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    var delay = this.rotAt - Date.now();</span>
     // Cap timeout to Node's max setTimeout, see
     // &lt;https://github.com/joyent/node/issues/8656&gt;.
-<span class="cstat-no" title="statement not covered" >    var TIMEOUT_MAX = 2147483647; </span>// 2^31-1
-<span class="cstat-no" title="statement not covered" >    if (delay &gt; TIMEOUT_MAX) {</span>
-<span class="cstat-no" title="statement not covered" >        delay = TIMEOUT_MAX;</span>
+<span class="cstat-no" title="statement not covered">    var TIMEOUT_MAX = 2147483647; </span>// 2^31-1
+<span class="cstat-no" title="statement not covered">    if (delay &gt; TIMEOUT_MAX) {</span>
+<span class="cstat-no" title="statement not covered">        delay = TIMEOUT_MAX;</span>
     }
-<span class="cstat-no" title="statement not covered" >    this.timeout = setTimeout(</span>
-<span class="fstat-no" title="function not covered" >        function () {</span>
-<span class="cstat-no" title="statement not covered" >            self._debug('_setRotationTimer timeout -&gt; call rotate()');</span>
-<span class="cstat-no" title="statement not covered" >            self.rotate();</span>
+<span class="cstat-no" title="statement not covered">    this.timeout = setTimeout(</span>
+<span class="fstat-no" title="function not covered">        function () {</span>
+<span class="cstat-no" title="statement not covered">            self._debug('_setRotationTimer timeout -&gt; call rotate()');</span>
+<span class="cstat-no" title="statement not covered">            self.rotate();</span>
         },
         delay);
-<span class="cstat-no" title="statement not covered" >    if (typeof (this.timeout.unref) === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >        this.timeout.unref();</span>
+<span class="cstat-no" title="statement not covered">    if (typeof (this.timeout.unref) === 'function') {</span>
+<span class="cstat-no" title="statement not covered">        this.timeout.unref();</span>
     }
 }
 &nbsp;
 RotatingFileStream.prototype._calcRotTime =
-<span class="fstat-no" title="function not covered" >function _calcRotTime(periodOffset) {</span>
-<span class="cstat-no" title="statement not covered" >    this._debug('_calcRotTime: %s%s', this.periodNum, this.periodScope);</span>
-<span class="cstat-no" title="statement not covered" >    var d = new Date();</span>
+<span class="fstat-no" title="function not covered">function _calcRotTime(periodOffset) {</span>
+<span class="cstat-no" title="statement not covered">    this._debug('_calcRotTime: %s%s', this.periodNum, this.periodScope);</span>
+<span class="cstat-no" title="statement not covered">    var d = new Date();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this._debug('  now local: %s', d);</span>
-<span class="cstat-no" title="statement not covered" >    this._debug('    now utc: %s', d.toISOString());</span>
-<span class="cstat-no" title="statement not covered" >    var rotAt;</span>
-<span class="cstat-no" title="statement not covered" >    switch (this.periodScope) {</span>
+<span class="cstat-no" title="statement not covered">    this._debug('  now local: %s', d);</span>
+<span class="cstat-no" title="statement not covered">    this._debug('    now utc: %s', d.toISOString());</span>
+<span class="cstat-no" title="statement not covered">    var rotAt;</span>
+<span class="cstat-no" title="statement not covered">    switch (this.periodScope) {</span>
     case 'ms':
         // Hidden millisecond period for debugging.
-<span class="cstat-no" title="statement not covered" >        if (this.rotAt) {</span>
-<span class="cstat-no" title="statement not covered" >            rotAt = this.rotAt + this.periodNum * periodOffset;</span>
+<span class="cstat-no" title="statement not covered">        if (this.rotAt) {</span>
+<span class="cstat-no" title="statement not covered">            rotAt = this.rotAt + this.periodNum * periodOffset;</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.now() + this.periodNum * periodOffset;</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.now() + this.periodNum * periodOffset;</span>
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'h':
-<span class="cstat-no" title="statement not covered" >        if (this.rotAt) {</span>
-<span class="cstat-no" title="statement not covered" >            rotAt = this.rotAt + this.periodNum * 60 * 60 * 1000 * periodOffset;</span>
+<span class="cstat-no" title="statement not covered">        if (this.rotAt) {</span>
+<span class="cstat-no" title="statement not covered">            rotAt = this.rotAt + this.periodNum * 60 * 60 * 1000 * periodOffset;</span>
         } else {
             // First time: top of the next hour.
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(),</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(),</span>
                 d.getUTCDate(), d.getUTCHours() + periodOffset);
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'd':
-<span class="cstat-no" title="statement not covered" >        if (this.rotAt) {</span>
-<span class="cstat-no" title="statement not covered" >            rotAt = this.rotAt + this.periodNum * 24 * 60 * 60 * 1000</span>
+<span class="cstat-no" title="statement not covered">        if (this.rotAt) {</span>
+<span class="cstat-no" title="statement not covered">            rotAt = this.rotAt + this.periodNum * 24 * 60 * 60 * 1000</span>
                 * periodOffset;
         } else {
             // First time: start of tomorrow (i.e. at the coming midnight) UTC.
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(),</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(),</span>
                 d.getUTCDate() + periodOffset);
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'w':
         // Currently, always on Sunday morning at 00:00:00 (UTC).
-<span class="cstat-no" title="statement not covered" >        if (this.rotAt) {</span>
-<span class="cstat-no" title="statement not covered" >            rotAt = this.rotAt + this.periodNum * 7 * 24 * 60 * 60 * 1000</span>
+<span class="cstat-no" title="statement not covered">        if (this.rotAt) {</span>
+<span class="cstat-no" title="statement not covered">            rotAt = this.rotAt + this.periodNum * 7 * 24 * 60 * 60 * 1000</span>
                 * periodOffset;
         } else {
             // First time: this coming Sunday.
-<span class="cstat-no" title="statement not covered" >            var dayOffset = (7 - d.getUTCDay());</span>
-<span class="cstat-no" title="statement not covered" >            if (periodOffset &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >                dayOffset = -d.getUTCDay();</span>
+<span class="cstat-no" title="statement not covered">            var dayOffset = (7 - d.getUTCDay());</span>
+<span class="cstat-no" title="statement not covered">            if (periodOffset &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered">                dayOffset = -d.getUTCDay();</span>
             }
-<span class="cstat-no" title="statement not covered" >            if (periodOffset &gt; 1 || periodOffset &lt; -1) {</span>
-<span class="cstat-no" title="statement not covered" >                dayOffset += 7 * periodOffset;</span>
+<span class="cstat-no" title="statement not covered">            if (periodOffset &gt; 1 || periodOffset &lt; -1) {</span>
+<span class="cstat-no" title="statement not covered">                dayOffset += 7 * periodOffset;</span>
             }
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(),</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(),</span>
                 d.getUTCDate() + dayOffset);
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'm':
-<span class="cstat-no" title="statement not covered" >        if (this.rotAt) {</span>
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear(),</span>
+<span class="cstat-no" title="statement not covered">        if (this.rotAt) {</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear(),</span>
                 d.getUTCMonth() + this.periodNum * periodOffset, 1);
         } else {
             // First time: the start of the next month.
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear(),</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear(),</span>
                 d.getUTCMonth() + periodOffset, 1);
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     case 'y':
-<span class="cstat-no" title="statement not covered" >        if (this.rotAt) {</span>
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear() + this.periodNum * periodOffset,</span>
+<span class="cstat-no" title="statement not covered">        if (this.rotAt) {</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear() + this.periodNum * periodOffset,</span>
                 0, 1);
         } else {
             // First time: the start of the next year.
-<span class="cstat-no" title="statement not covered" >            rotAt = Date.UTC(d.getUTCFullYear() + periodOffset, 0, 1);</span>
+<span class="cstat-no" title="statement not covered">            rotAt = Date.UTC(d.getUTCFullYear() + periodOffset, 0, 1);</span>
         }
-<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="cstat-no" title="statement not covered">        break;</span>
     default:
-<span class="cstat-no" title="statement not covered" >        assert.fail(format('invalid period scope: "%s"', this.periodScope));</span>
+<span class="cstat-no" title="statement not covered">        assert.fail(format('invalid period scope: "%s"', this.periodScope));</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (this._debug()) {</span>
-<span class="cstat-no" title="statement not covered" >        this._debug('  **rotAt**: %s (utc: %s)', rotAt,</span>
+<span class="cstat-no" title="statement not covered">    if (this._debug()) {</span>
+<span class="cstat-no" title="statement not covered">        this._debug('  **rotAt**: %s (utc: %s)', rotAt,</span>
             new Date(rotAt).toUTCString());
-<span class="cstat-no" title="statement not covered" >        var now = Date.now();</span>
-<span class="cstat-no" title="statement not covered" >        this._debug('        now: %s (%sms == %smin == %sh to go)',</span>
+<span class="cstat-no" title="statement not covered">        var now = Date.now();</span>
+<span class="cstat-no" title="statement not covered">        this._debug('        now: %s (%sms == %smin == %sh to go)',</span>
             now,
             rotAt - now,
             (rotAt-now)/1000/60,
             (rotAt-now)/1000/60/60);
     }
-<span class="cstat-no" title="statement not covered" >    return rotAt;</span>
+<span class="cstat-no" title="statement not covered">    return rotAt;</span>
 };
 &nbsp;
-RotatingFileStream.prototype.rotate = <span class="fstat-no" title="function not covered" >function rotate() {</span>
+RotatingFileStream.prototype.rotate = <span class="fstat-no" title="function not covered">function rotate() {</span>
     // XXX What about shutdown?
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
     // If rotation period is &gt; ~25 days, we have to break into multiple
     // setTimeout's. See &lt;https://github.com/joyent/node/issues/8656&gt;.
-<span class="cstat-no" title="statement not covered" >    if (self.rotAt &amp;&amp; self.rotAt &gt; Date.now()) {</span>
-<span class="cstat-no" title="statement not covered" >        return self._setRotationTimer();</span>
+<span class="cstat-no" title="statement not covered">    if (self.rotAt &amp;&amp; self.rotAt &gt; Date.now()) {</span>
+<span class="cstat-no" title="statement not covered">        return self._setRotationTimer();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this._debug('rotate');</span>
-<span class="cstat-no" title="statement not covered" >    if (self.rotating) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new TypeError('cannot start a rotation when already rotating');</span>
+<span class="cstat-no" title="statement not covered">    this._debug('rotate');</span>
+<span class="cstat-no" title="statement not covered">    if (self.rotating) {</span>
+<span class="cstat-no" title="statement not covered">        throw new TypeError('cannot start a rotation when already rotating');</span>
     }
-<span class="cstat-no" title="statement not covered" >    self.rotating = true;</span>
+<span class="cstat-no" title="statement not covered">    self.rotating = true;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.stream.end(); </span> // XXX can do moves sync after this? test at high rate
+<span class="cstat-no" title="statement not covered">    self.stream.end(); </span> // XXX can do moves sync after this? test at high rate
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function del() {</span>
-<span class="cstat-no" title="statement not covered" >        var toDel = self.path + '.' + String(n - 1);</span>
-<span class="cstat-no" title="statement not covered" >        if (n === 0) {</span>
-<span class="cstat-no" title="statement not covered" >            toDel = self.path;</span>
+<span class="fstat-no" title="function not covered">    function del() {</span>
+<span class="cstat-no" title="statement not covered">        var toDel = self.path + '.' + String(n - 1);</span>
+<span class="cstat-no" title="statement not covered">        if (n === 0) {</span>
+<span class="cstat-no" title="statement not covered">            toDel = self.path;</span>
         }
-<span class="cstat-no" title="statement not covered" >        n -= 1;</span>
-<span class="cstat-no" title="statement not covered" >        self._debug('  rm %s', toDel);</span>
-<span class="cstat-no" title="statement not covered" >        fs.unlink(toDel, <span class="fstat-no" title="function not covered" >function (delErr) {</span></span>
+<span class="cstat-no" title="statement not covered">        n -= 1;</span>
+<span class="cstat-no" title="statement not covered">        self._debug('  rm %s', toDel);</span>
+<span class="cstat-no" title="statement not covered">        fs.unlink(toDel, <span class="fstat-no" title="function not covered">function (delErr) {</span></span>
             //XXX handle err other than not exists
-<span class="cstat-no" title="statement not covered" >            moves();</span>
+<span class="cstat-no" title="statement not covered">            moves();</span>
         });
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function moves() {</span>
-<span class="cstat-no" title="statement not covered" >        if (self.count === 0 || n &lt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            return finish();</span>
+<span class="fstat-no" title="function not covered">    function moves() {</span>
+<span class="cstat-no" title="statement not covered">        if (self.count === 0 || n &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered">            return finish();</span>
         }
-<span class="cstat-no" title="statement not covered" >        var before = self.path;</span>
-<span class="cstat-no" title="statement not covered" >        var after = self.path + '.' + String(n);</span>
-<span class="cstat-no" title="statement not covered" >        if (n &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            before += '.' + String(n - 1);</span>
+<span class="cstat-no" title="statement not covered">        var before = self.path;</span>
+<span class="cstat-no" title="statement not covered">        var after = self.path + '.' + String(n);</span>
+<span class="cstat-no" title="statement not covered">        if (n &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">            before += '.' + String(n - 1);</span>
         }
-<span class="cstat-no" title="statement not covered" >        n -= 1;</span>
-<span class="cstat-no" title="statement not covered" >        fs.exists(before, <span class="fstat-no" title="function not covered" >function (exists) {</span></span>
-<span class="cstat-no" title="statement not covered" >            if (!exists) {</span>
-<span class="cstat-no" title="statement not covered" >                moves();</span>
+<span class="cstat-no" title="statement not covered">        n -= 1;</span>
+<span class="cstat-no" title="statement not covered">        fs.exists(before, <span class="fstat-no" title="function not covered">function (exists) {</span></span>
+<span class="cstat-no" title="statement not covered">            if (!exists) {</span>
+<span class="cstat-no" title="statement not covered">                moves();</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                self._debug('  mv %s %s', before, after);</span>
-<span class="cstat-no" title="statement not covered" >                mv(before, after, <span class="fstat-no" title="function not covered" >function (mvErr) {</span></span>
-<span class="cstat-no" title="statement not covered" >                    if (mvErr) {</span>
-<span class="cstat-no" title="statement not covered" >                        self.emit('error', mvErr);</span>
-<span class="cstat-no" title="statement not covered" >                        finish(); </span>// XXX finish here?
+<span class="cstat-no" title="statement not covered">                self._debug('  mv %s %s', before, after);</span>
+<span class="cstat-no" title="statement not covered">                mv(before, after, <span class="fstat-no" title="function not covered">function (mvErr) {</span></span>
+<span class="cstat-no" title="statement not covered">                    if (mvErr) {</span>
+<span class="cstat-no" title="statement not covered">                        self.emit('error', mvErr);</span>
+<span class="cstat-no" title="statement not covered">                        finish(); </span>// XXX finish here?
                     } else {
-<span class="cstat-no" title="statement not covered" >                        moves();</span>
+<span class="cstat-no" title="statement not covered">                        moves();</span>
                     }
                 });
             }
         })
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function finish() {</span>
-<span class="cstat-no" title="statement not covered" >        self._debug('  open %s', self.path);</span>
-<span class="cstat-no" title="statement not covered" >        self.stream = fs.createWriteStream(self.path,</span>
+<span class="fstat-no" title="function not covered">    function finish() {</span>
+<span class="cstat-no" title="statement not covered">        self._debug('  open %s', self.path);</span>
+<span class="cstat-no" title="statement not covered">        self.stream = fs.createWriteStream(self.path,</span>
             {flags: 'a', encoding: 'utf8'});
-<span class="cstat-no" title="statement not covered" >        var q = self.rotQueue, len = q.length;</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; len; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            self.stream.write(q[i]);</span>
+<span class="cstat-no" title="statement not covered">        var q = self.rotQueue, len = q.length;</span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered">            self.stream.write(q[i]);</span>
         }
-<span class="cstat-no" title="statement not covered" >        self.rotQueue = [];</span>
-<span class="cstat-no" title="statement not covered" >        self.rotating = false;</span>
-<span class="cstat-no" title="statement not covered" >        self.emit('drain');</span>
-<span class="cstat-no" title="statement not covered" >        self._setupNextRot();</span>
+<span class="cstat-no" title="statement not covered">        self.rotQueue = [];</span>
+<span class="cstat-no" title="statement not covered">        self.rotating = false;</span>
+<span class="cstat-no" title="statement not covered">        self.emit('drain');</span>
+<span class="cstat-no" title="statement not covered">        self._setupNextRot();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var n = this.count;</span>
-<span class="cstat-no" title="statement not covered" >    del();</span>
+<span class="cstat-no" title="statement not covered">    var n = this.count;</span>
+<span class="cstat-no" title="statement not covered">    del();</span>
 };
 &nbsp;
-RotatingFileStream.prototype.write = <span class="fstat-no" title="function not covered" >function write(s) {</span>
-<span class="cstat-no" title="statement not covered" >    if (this.rotating) {</span>
-<span class="cstat-no" title="statement not covered" >        this.rotQueue.push(s);</span>
-<span class="cstat-no" title="statement not covered" >        return false;</span>
+RotatingFileStream.prototype.write = <span class="fstat-no" title="function not covered">function write(s) {</span>
+<span class="cstat-no" title="statement not covered">    if (this.rotating) {</span>
+<span class="cstat-no" title="statement not covered">        this.rotQueue.push(s);</span>
+<span class="cstat-no" title="statement not covered">        return false;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        return this.stream.write(s);</span>
+<span class="cstat-no" title="statement not covered">        return this.stream.write(s);</span>
     }
 };
 &nbsp;
-RotatingFileStream.prototype.end = <span class="fstat-no" title="function not covered" >function end(s) {</span>
-<span class="cstat-no" title="statement not covered" >    this.stream.end();</span>
+RotatingFileStream.prototype.end = <span class="fstat-no" title="function not covered">function end(s) {</span>
+<span class="cstat-no" title="statement not covered">    this.stream.end();</span>
 };
 &nbsp;
-RotatingFileStream.prototype.destroy = <span class="fstat-no" title="function not covered" >function destroy(s) {</span>
-<span class="cstat-no" title="statement not covered" >    this.stream.destroy();</span>
+RotatingFileStream.prototype.destroy = <span class="fstat-no" title="function not covered">function destroy(s) {</span>
+<span class="cstat-no" title="statement not covered">    this.stream.destroy();</span>
 };
 &nbsp;
-RotatingFileStream.prototype.destroySoon = <span class="fstat-no" title="function not covered" >function destroySoon(s) {</span>
-<span class="cstat-no" title="statement not covered" >    this.stream.destroySoon();</span>
+RotatingFileStream.prototype.destroySoon = <span class="fstat-no" title="function not covered">function destroySoon(s) {</span>
+<span class="cstat-no" title="statement not covered">    this.stream.destroySoon();</span>
 };
 &nbsp;
 } /* if (mv) */
@@ -5032,40 +5030,40 @@ RotatingFileStream.prototype.destroySoon = <span class="fstat-no" title="functio
  *
  *    - limit: number of records to keep in memory
  */
-<span class="fstat-no" title="function not covered" >function RingBuffer(options) {</span>
-<span class="cstat-no" title="statement not covered" >    this.limit = options &amp;&amp; options.limit ? options.limit : 100;</span>
-<span class="cstat-no" title="statement not covered" >    this.writable = true;</span>
-<span class="cstat-no" title="statement not covered" >    this.records = [];</span>
-<span class="cstat-no" title="statement not covered" >    EventEmitter.call(this);</span>
+<span class="fstat-no" title="function not covered">function RingBuffer(options) {</span>
+<span class="cstat-no" title="statement not covered">    this.limit = options &amp;&amp; options.limit ? options.limit : 100;</span>
+<span class="cstat-no" title="statement not covered">    this.writable = true;</span>
+<span class="cstat-no" title="statement not covered">    this.records = [];</span>
+<span class="cstat-no" title="statement not covered">    EventEmitter.call(this);</span>
 }
 &nbsp;
 util.inherits(RingBuffer, EventEmitter);
 &nbsp;
-RingBuffer.prototype.write = <span class="fstat-no" title="function not covered" >function (record) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!this.writable)</span>
-<span class="cstat-no" title="statement not covered" >        throw (new Error('RingBuffer has been ended already'));</span>
+RingBuffer.prototype.write = <span class="fstat-no" title="function not covered">function (record) {</span>
+<span class="cstat-no" title="statement not covered">    if (!this.writable)</span>
+<span class="cstat-no" title="statement not covered">        throw (new Error('RingBuffer has been ended already'));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.records.push(record);</span>
+<span class="cstat-no" title="statement not covered">    this.records.push(record);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (this.records.length &gt; this.limit)</span>
-<span class="cstat-no" title="statement not covered" >        this.records.shift();</span>
+<span class="cstat-no" title="statement not covered">    if (this.records.length &gt; this.limit)</span>
+<span class="cstat-no" title="statement not covered">        this.records.shift();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (true);</span>
+<span class="cstat-no" title="statement not covered">    return (true);</span>
 };
 &nbsp;
-RingBuffer.prototype.end = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    if (arguments.length &gt; 0)</span>
-<span class="cstat-no" title="statement not covered" >        this.write.apply(this, Array.prototype.slice.call(arguments));</span>
-<span class="cstat-no" title="statement not covered" >    this.writable = false;</span>
+RingBuffer.prototype.end = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    if (arguments.length &gt; 0)</span>
+<span class="cstat-no" title="statement not covered">        this.write.apply(this, Array.prototype.slice.call(arguments));</span>
+<span class="cstat-no" title="statement not covered">    this.writable = false;</span>
 };
 &nbsp;
-RingBuffer.prototype.destroy = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    this.writable = false;</span>
-<span class="cstat-no" title="statement not covered" >    this.emit('close');</span>
+RingBuffer.prototype.destroy = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    this.writable = false;</span>
+<span class="cstat-no" title="statement not covered">    this.emit('close');</span>
 };
 &nbsp;
-RingBuffer.prototype.destroySoon = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    this.destroy();</span>
+RingBuffer.prototype.destroySoon = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    this.destroy();</span>
 };
 &nbsp;
 &nbsp;
@@ -5086,8 +5084,8 @@ module.exports.nameFromLevel = nameFromLevel;
 module.exports.VERSION = VERSION;
 module.exports.LOG_VERSION = LOG_VERSION;
 &nbsp;
-module.exports.createLogger = <span class="fstat-no" title="function not covered" >function createLogger(options) {</span>
-<span class="cstat-no" title="statement not covered" >    return new Logger(options);</span>
+module.exports.createLogger = <span class="fstat-no" title="function not covered">function createLogger(options) {</span>
+<span class="cstat-no" title="statement not covered">    return new Logger(options);</span>
 };
 &nbsp;
 module.exports.RingBuffer = RingBuffer;
@@ -5099,10 +5097,11 @@ module.exports.RotatingFileStream = RotatingFileStream;
 module.exports.safeCycles = safeCycles;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:25:35 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 15:33:47 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
