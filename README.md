@@ -1,6 +1,6 @@
 # npmtest-bunyan
 
-#### test coverage for  [bunyan (v1.8.10)](https://github.com/trentm/node-bunyan#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-bunyan.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-bunyan) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-bunyan.svg)](https://travis-ci.org/npmtest/node-npmtest-bunyan)
+#### basic test coverage for  [bunyan (v1.8.10)](https://github.com/trentm/node-bunyan#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-bunyan.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-bunyan) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-bunyan.svg)](https://travis-ci.org/npmtest/node-npmtest-bunyan)
 
 #### a JSON logging library for node.js services
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-bunyan/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-bunyan/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-bunyan/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-bunyan/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-bunyan/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-bunyan/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-bunyan/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-bunyan/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-bunyan/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-bunyan/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-bunyan/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-bunyan/build/coverage.html/index.html)
 

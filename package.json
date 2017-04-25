@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "#### test coverage for  [bunyan (v1.8.10)](https://github.com/trentm/node-bunyan#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-bunyan.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-bunyan) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-bunyan.svg)](https://travis-ci.org/npmtest/node-npmtest-bunyan)",
+    "description": "#### basic test coverage for  [bunyan (v1.8.10)](https://github.com/trentm/node-bunyan#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-bunyan.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-bunyan) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-bunyan.svg)](https://travis-ci.org/npmtest/node-npmtest-bunyan)",
     "devDependencies": {
         "bunyan": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
